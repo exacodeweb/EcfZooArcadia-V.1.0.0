@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.habitats, .animals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.habitat-card, .animal-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.habitat-card img, .animal-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.veterinary-report {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+.habitats-list, .animals-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.habitat, .animal {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+}

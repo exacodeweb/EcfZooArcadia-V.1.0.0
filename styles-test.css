@@ -1,0 +1,635 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  padding: 0 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.cta {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
+}
+
+/* Introduction *//*
+.intro {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ccc;
+}*/
+
+/*--------------------------------------------------------------------*/
+/* Section Intro */
+.intro {
+  position: relative;
+  height: 500px; /* Hauteur définie */
+  background-image: url('./assets/images/image-intro.jpg');/*./assets/images/image5.jfif*/ /*images/zoo-background.jpg Chemin vers l'image de fond */
+  background-size: cover; /* L'image couvre toute la section */
+  background-position: center; /* Centrage de l'image */
+  display: flex; /* Pour centrer le contenu */
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajoute un voile sombre pour améliorer la lisibilité du texte */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-text {
+  font-size: 24px;
+  color: #fff; /* Texte blanc */
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+/*--------------------------------------------------------------------*/
+
+.intro-text {
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Habitats */
+.habitats {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+
+ 
+}
+
+.image-placeholder {
+  height: 150px;
+  background: #ddd;
+}
+
+/* Services */
+.services {
+  padding: 20px;
+  background: #eee;
+}
+
+/*code couleur
+#4caf150
+#da811b
+
+*/
+/*--------------------------------------------------------------------------------------------------------------------*/
+.card-title {/*ajouter centré le titre*/
+  text-align: center;
+}
+
+.card img {
+  width: 100%; /* S'adapte à la largeur de la carte */
+  height: 200px; /* Hauteur fixe pour uniformité 150px*/
+  object-fit: cover; /* Maintient l'image dans le cadre en coupant les bords si nécessaire */
+  border-radius: 5px; /* Coins arrondis pour un effet esthétique */
+  margin-bottom: 10px; /* Espace entre l'image et le texte */
+}
+
+@media (max-width: 768px) {
+  .card img {
+      height: 100px; /* Réduction de la hauteur pour les petits écrans */
+  }
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon-placeholder {
+  width: 50px;
+  height: 50px;
+  background: #ddd;
+  margin-bottom: 10px;
+}
+
+/*---------------------------------------------------------------------------------------------------- Testimonials --*/
+.testimonials {
+  padding: 20px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.carousel {
+  margin-bottom: 20px;
+}
+
+/*---------------------------------------------------------------------------------------------------------- Footer --*//*
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}*/
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Header */
+  .header {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 10px;
+  }
+
+  .navigation ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .cta {
+      margin-top: 10px;
+      width: 100%;
+      height: auto;
+  }
+
+  /* Intro */
+  .intro-text {
+      font-size: 18px;
+      padding: 10px;
+  }
+
+  /* Habitats */
+  .grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      display: inline-block;
+  }
+
+  /* Services */
+  .icons {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+  }
+
+  .icon-placeholder {
+      width: 40px;
+      height: 40px;
+  }
+
+  /* Testimonials */
+  .testimonials .cta {
+      width: 100%;
+      margin-top: 10px;
+  }
+
+  /* Footer */
+  .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .practical-info,
+  .social-media,
+  .legal {
+      margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Header */
+  .header {
+      padding: 5px;
+  }
+
+  .logo {
+      font-size: 16px;
+  }
+
+  .navigation ul {
+      gap: 5px;
+  }
+
+  /* Intro */
+  .intro {
+      height: 300px;
+  }
+
+  .intro-text {
+      font-size: 16px;
+  }
+
+  /* Habitats */
+  .grid {
+      gap: 5px;
+  }
+
+  /* Services */
+  .icon-placeholder {
+      width: 30px;
+      height: 30px;
+  }
+
+  /* Footer */
+  .footer {
+      padding: 10px;
+  }
+}
+
+
+
+/* Pied de page */
+footer {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+footer h5 {
+  color: #f2a007;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #f2a007;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  /* Pied de page en mode pile */
+  footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+    /* Footer centré */
+    footer ul {
+      padding: 0;
+      text-align: center;
+    }
+  
+    /* Sections du footer en colonne */
+    footer .col-md-4 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    /*----------------------*/
+    .list-unstyled-footer {
+      text-align: center;
+    }
+    /*----------------------*/  
+
+
+    /* Reseau sociaux */
+    .fe-facebook-f {
+      color: white;
+      background: white;
+    }
+
+  
+
+
+}
+
+/*<!-- Section Réseaux sociaux -->
+<div class="col-md-4 mb-3">
+  <section class="contact-f">
+    <h5 class="text-uppercase text-white">Suivez-nous</h5>
+    <ul class="list-unstyled">
+      <a href="http://www.facebook.fr" class="text-white me-3 mr-3"><i class="fab fa-facebook-f"></i></a>
+      <a href="http://www.twitter.fr" class="text-white me-3 mr-3"><i class="fab fa-twitter"></i></a>
+      <!--<a href="http://www.x.com" class="text-white me-3 mr-3"><i class="fab fa-x-twitter"></i></a>-->
+      <a href="http://www.instagram.com" class="text-white me-3 mr-3"><i class="fab fa-instagram"></i></a>
+      <a href="http://www.linkedin.fr" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+    </ul>
+  </section>
+</div>*/
+
+
+
+
+/*------------------------------------------------------------------------------------------------------ Pied de page */
+.footer-container {
+  border: 1px solid white;
+  display: flex;
+  /*flex-direction: column;*/
+}
+
+footer {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 2rem 0;
+
+  /*display: flex;
+  flex-direction: column;*/
+}
+
+footer h5 {
+  color: #f2a007;
+  margin-bottom: 1rem;
+
+  text-align: left;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #f2a007;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+  /* Footer centré */
+  footer ul {
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Sections du footer en colonne */
+  footer .col-md-4 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /*----------------------*/
+  .list-unstyled-footer {
+    text-align: center;
+  }
+  /*----------------------*/
+  @media (max-width: 576px) {
+
+    /* Footer centré */
+      footer ul {
+        padding: 0;
+        text-align: center;
+      }
+    
+      /* Sections du footer en colonne */
+      footer .col-md-4 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    
+      /*----------------------*/
+      .list-unstyled-footer {
+        text-align: center;
+      }
+      /*----------------------*/
+    
+    }
+    
+
+
+
+
+
+  /* Pied de page */
+footer {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+footer h5 {
+  color: #f2a007;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #f2a007;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Taille du texte réduite pour les petits écrans *//*
+  #presentation h1 {
+    font-size: 2rem;
+  }
+
+  #presentation p, section h2 {
+    font-size: 1.5rem;
+  }*/
+
+  /* Ajustement des grilles d'images *//*
+  .images-presentation img, .animal-grid img {
+    max-width: 120px;
+  }*/
+
+  /* Centrage des éléments de navigation *//*
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }*/
+
+  /* Pied de page en mode pile */
+  footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Logo et images encore plus réduits pour mobiles *//*
+  .img-logo-1 img {
+    max-width: 80px;
+
+  }*/
+
+ /* section img .col-md-4 .container .presentation {
+    flex-direction: column;
+    justify-content: space-around;
+        margin-bottom: 10px;
+  }*/
+
+  /*.nav-admin-link {
+text-align: center;
+  }
+
+  .images-presentation img, .animal-grid img {
+    max-width: 100px;
+  }*/
+
+  /* Ajustement de la taille des sections de texte *//*
+  #presentation h1 {
+    font-size: 1.5rem;
+  }
+
+  #presentation p, section h2 {
+    font-size: 1.2rem;
+  }*/
+
+  /* Footer centré */
+  footer ul {
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Sections du footer en colonne */
+  footer .col-md-4 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /*----------------------*/
+  .list-unstyled-footer {
+    text-align: center;
+  }
+  /*----------------------*/
+
+}
+
+
+
+
+
+
+/*-- Effet texte sur images --*/
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 10px; /* Ajustez la position verticale */
+  left: 10px; /* Ajustez la position horizontale */
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  color: #fff; /* Couleur du texte */
+  padding: 5px 10px; /* Espacement autour du texte */
+  font-size: 14px; /* Taille du texte */
+  border-radius: 5px; /* Coins arrondis */
+}
+
+
+/*-- image lien externe au survol --*/
+
+  /* Style de base pour l'image */
+  .image-lien img {
+    width: 100%;/*300px*/
+    /* Taille de l'image */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Animation */
+  }
+
+  /* Effet au survol */
+  .image-lien:hover img {
+    transform: scale(1.1);
+    /* Agrandit légèrement l'image */
+    opacity: 0.8;
+    /* Rend l'image légèrement transparente */
+  }
+
+  /* Supprime la bordure par défaut des liens */
+  .image-lien {
+    text-decoration: none;
+  }
+
+
+

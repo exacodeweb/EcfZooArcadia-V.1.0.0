@@ -1,0 +1,13 @@
+Crédits des images et icônes utilisées dans le projet Garage Vincent Parrot :
+
+1. **Icônes :**
+   - Icône voiture par Freepik (https://www.flaticon.com/authors/freepik) - Source : Flaticon
+   - Icône moteur par Smashicons (https://www.flaticon.com/authors/smashicons) - Source : Flaticon
+
+2. **Photos :**
+   - Photos prises par l'équipe interne du garage.
+   - Photos supplémentaires téléchargées depuis Pixabay (https://pixabay.com).
+
+3. **Autres ressources :**
+   - Police d'écriture : Open Sans (Google Fonts)
+   - Background utilisé sur la page d'accueil : Unsplash (https://unsplash.com)

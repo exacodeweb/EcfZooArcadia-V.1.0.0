@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Système d'Avis</title>
+  <!--<link rel="stylesheet" href="styles.css">-->
+  <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+  <section id="avis">
+    <h3>Ce que nos visiteurs disent</h3>
+    <div class="avis-container">
+      <!-- Les avis validés seront insérés ici dynamiquement -->
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      fetch("avis-api.php")
+        .then(response => response.json())
+        .then(data => {
+          const avisContainer = document.querySelector(".avis-container");
+
+          if (data.length === 0) {
+            avisContainer.innerHTML = "<p>Aucun avis disponible pour le moment.</p>";
+            return;
+          }
+
+          data.forEach(avis => {
+            const avisElement = document.createElement("div");
+            avisElement.className = "avis";
+            avisElement.innerHTML = `
+              <p>“${avis.message}”</p>
+              <cite>- ${avis.auteur}</cite>
+            `;
+            avisContainer.appendChild(avisElement);
+          });
+        })
+        .catch(error => {
+          console.error("Erreur :", error);
+          document.querySelector(".avis-container").innerHTML =
+            "<p>Erreur lors du chargement des avis.</p>";
+        });
+    });
+  </script>
+</body>
+</html>

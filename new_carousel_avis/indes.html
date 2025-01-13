@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <section id="avis">
+    <h3>Ce que nos visiteurs disent</h3>
+    <div class="avis-scroll-container">
+      <div class="./avis-container">
+        <!-- Les avis validés seront insérés ici dynamiquement -->
+      </div>
+    </div>
+    <!-- Boutons pour naviguer vers d'autres sections -->
+    <button onclick="window.location.href='../tous-les-avis.php'" class="btn btn-primary mt-3">Voir tous les
+      avis</button>
+    <button onclick="window.location.href='../soumettre-avis.html'" class="btn btn-secondary mt-3">Laisser un
+      avis</button>
+  </section>
+
+<a href="../tous-les-avis.php"></a>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const avisContainer = document.querySelector(".avis-container");
+  const avisScrollContainer = document.querySelector(".avis-scroll-container");
+
+  // Fonction pour charger les avis via API
+  function chargerAvis() {
+    fetch("./get_reviews.php") // API PHP pour récupérer les avis
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Erreur lors du chargement des avis.");
+        }
+        return response.json();
+      })
+      .then((avisData) => {
+        // Ajouter dynamiquement les avis dans le conteneur
+        avisData.forEach((avis) => {
+          const avisElement = document.createElement("div");
+          avisElement.className = "avis";
+          avisElement.innerHTML = `
+            <p>“${avis.message}”</p>
+            <cite>- ${avis.auteur}</cite>
+          `;
+          avisContainer.appendChild(avisElement);
+        });
+
+        // Dupliquer les avis pour permettre un défilement infini
+        const avisElements = Array.from(avisContainer.children);
+        avisElements.forEach((avis) => {
+          const clone = avis.cloneNode(true);
+          avisContainer.appendChild(clone);
+        });
+
+        // Lancer le défilement automatique
+        defilementAutomatique();
+      })
+      .catch((error) => {
+        console.error(error.message);
+        avisContainer.innerHTML = `
+          <p>Erreur lors du chargement des avis. Veuillez réessayer plus tard.</p>
+        `;
+      });
+  }
+
+  // Fonction pour le défilement automatique
+  function defilementAutomatique() {
+    let scrollAmount = 0;
+    const scrollSpeed = 1;
+
+    function scroll() {
+      scrollAmount += scrollSpeed;
+      if (scrollAmount >= avisContainer.scrollWidth / 2) {
+        scrollAmount = 0; // Réinitialisation pour boucle
+      }
+      avisScrollContainer.scrollLeft = scrollAmount;
+      requestAnimationFrame(scroll);
+    }
+
+    scroll();
+  }
+
+  // Charger les avis au démarrage
+  chargerAvis();
+});
+</script>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

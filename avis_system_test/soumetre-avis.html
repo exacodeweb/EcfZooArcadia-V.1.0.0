@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumettre un Avis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Soumettre un Avis</h1>
+    <form action="soumetre-avis.php" method="POST" id="form-avis">
+        <div>
+            <label for="auteur">Votre Nom :</label>
+            <input type="text" id="auteur" name="auteur" required placeholder="Votre nom">
+        </div>
+        <div>
+            <label for="message">Votre Avis :</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Votre avis ici"></textarea>
+        </div>
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>

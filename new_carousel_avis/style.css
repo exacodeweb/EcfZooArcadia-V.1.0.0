@@ -1,0 +1,136 @@
+/* Style pour la section principale des avis */
+#avis {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+/* Conteneur défilant pour les avis */
+.avis-scroll-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
+/* Conteneur des avis avec animation */
+.avis-container {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Style pour chaque avis */
+.avis {
+  min-width: 300px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du contenu des avis */
+.avis p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.avis cite {
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Style pour les boutons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  margin-top: 100px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary {
+  background-color: #28a745;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-- pour centrée le carousel --*/
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  #avis {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+  }
+/*
+  .avis-scroll-container {
+    overflow: hidden;
+    /* Masquer la scroll-bar *//*
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+  }
+
+  .avis-container {
+    display: inline-flex;
+    gap: 20px;
+  }
+
+  .avis {
+    flex: 0 0 300px;
+    /* Largeur fixe de 300px *//*
+    max-width: 300px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    /*#ddd*//*
+    border-radius: 8px;
+    background: #f9f9f9;
+    text-align: center;
+    /*left*//*
+    box-sizing: border-box;
+  }
+
+  .avis p {
+    font-style: italic;
+  }
+
+  .avis cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+  }
+

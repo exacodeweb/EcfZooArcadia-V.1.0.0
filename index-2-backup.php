@@ -1,0 +1,1947 @@
+<!--------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoo Arcadia - Accueil</title>
+
+  <!-- Lien vers le fichier CSS principal -->
+  <link rel="stylesheet" href="./styles/style-2.css">
+  <!-- Lien Test carousel avis -->
+  <link rel="stylesheet" href="x./Avis/style.css">
+
+  <!-- Lien vers Bootstrap pour le style et la mise en page responsive -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!------------------------------------------------------------------>
+  <!-- Icon Font Stylesheet --><!--
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">-->
+
+  <!-- Libraries Stylesheet --><!--
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">-->
+
+  <!-- Customized Bootstrap Stylesheet --><!--
+    <link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+  <!-- Template Stylesheet --><!--
+    <link href="css/style.css" rel="stylesheet">-->
+
+  <!------------------------------------------------------------------>
+
+
+
+
+
+
+  <!-- Styles internes pour des personnalisations spécifiques -->
+  <style>
+    /* Flexbox pour aligner les images et sections de présentation */
+    .images-presentation,
+    .animal-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Suppression de l'espace par défaut autour de la page */
+    .container-fluid {
+      padding: 0 !important;
+    }
+
+    /* Style des images de la grille pour qu'elles s'ajustent bien sur mobile */
+    .animal-grid img {
+      width: 100%;
+      max-width: 150px;
+      margin: 5px;
+    }
+
+    /* Style de la navigation pour les petits écrans */
+    .menu ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Ajustements du logo et menu sur petits écrans */
+    .img-logo-1 img {
+      max-width: 80px;
+      margin: auto;
+    }
+
+    @media (max-width: 576px) {
+
+      /* Ajustement des images de présentation */
+      .images-presentation img {
+        width: 100%;
+        max-width: 120px;
+        margin: 5px;
+      }
+
+      /* Ajustement du texte dans les sections */
+      h1,
+      h2 {
+        font-size: 1.5em;
+      }
+
+      /* Pied de page pour les écrans étroits */
+      footer ul {
+        padding: 0;
+        text-align: center;
+      }
+
+      /* Centrage des sections de footer */
+      footer .col-md-4 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+
+  <style>
+    .section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease-in-out;
+    }
+
+    /*.section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }*/
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    body {
+      /*
+        background-image: url('../public/asset/images/nature-background.jpg');
+        background-size: cover; /* L'image couvre tout l'écran */
+      /*
+        background-attachment: fixed; /* L'image reste en place quand on fait défiler */
+      /*
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #333; /* Assurez un bon contraste avec le texte */
+      /*
+        */
+
+      /*
+        background: linear-gradient(to bottom, #a8dadc, #457b9d);
+        font-family: 'Roboto', sans-serif;
+        color: #1d3557;
+        margin: 0;*/
+      /*--------------------------------------------------------------------------------------------------------------*/
+      /*background: linear-gradient(to bottom, #a8dadc, #457b9d);*/
+      font-family: 'Roboto', sans-serif;
+      color: #1d3557;
+      margin: 0;
+      /*--------------------------------------------------------------------------------------------------------------*/
+      /*
+        background-image: url('../public/asset/images/subtle-texture.png');
+        background-size: 200px 200px;
+        background-repeat: repeat;
+        color: #333;
+        */
+    }
+
+
+    .container-fluid {
+      background-color: #2b2b2b;
+    }
+
+
+    /*
+
+      html {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #010101;  
+      }*/
+    /*nav {
+        background: beige;
+      }*/
+    /*-------------------------------------------------------------------------------------------------- EFFET NEON --*/
+    .neon.night-mode {
+      width: 100%;
+      /*400px*/
+      height: auto;
+      /*80px*/
+      /*200px*/
+      border: 4px solid #fff;
+      /*border-radius: 12px;*/
+      box-shadow:
+        0 0 8px #fff,
+        inset 0 0 8px #fff,
+
+        0 0 16px #37f713,
+        /*16px*/
+
+        inset 0 0 16px #37f713,
+        /*16px*/
+
+        0 0 5px #37f713,
+        /*32px*/
+
+        inset 0 0 5px #37f713;
+      /*32px*/
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+
+    /*--------------------------------- Test --*/
+    /*body {
+      background-color: white;
+      color: black;
+      transition: all 0.5s ease;
+      }
+
+      body.night-mode {
+          background-color: orange;/*#2c3e50*/
+    /*
+          color: white;
+      }*/
+
+
+    /*----------------------------------------------------------------------------------------------------------------*/
+    .card img {
+      height: 200px;
+      /* Ajustez cette hauteur selon vos besoins */
+      width: 100%;
+      object-fit: cover;
+      /* Garde une mise à l'échelle correcte */
+      border-radius: 8px;
+    }
+
+    /*.img-fluid {
+      object-fit: cover; */
+    /* Recadre pour remplir la zone sans déformation */
+    /*
+      }*/
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      /* Espacement entre les cartes */
+      justify-content: center;
+      /* Centrer les cartes */
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      /* Espacement entre les cartes */
+      justify-content: center;
+      /* Centrer les cartes */
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      /* Assure que toutes les cartes ont la même hauteur */
+      border: 1px solid #ddd;
+      /* Optionnel : bordure pour style */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Optionnel */
+      border-radius: 8px;
+      /* Coins arrondis */
+      overflow: hidden;
+    }
+
+    .card-body {
+      flex-grow: 1;
+      /* Étire la section du corps pour uniformiser la hauteur */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-title,
+    .card-text {
+      margin: 0;
+      /* Éviter les marges externes indésirables */
+      text-align: center;
+      /* Centrer le texte */
+      padding: 10px;
+      /* Optionnel : espacement intérieur */
+    }
+
+
+    .presentation img {
+      width: 100%;
+      /* Occupe toute la largeur du conteneur */
+      height: 300px;
+      /* Définissez une hauteur fixe (ajustez selon vos besoins) */
+      object-fit: cover;
+      /* Recadre pour remplir la zone sans déformation */
+      border-radius: 8px;
+      /* Optionnel : coins arrondis pour le style */
+      display: block;
+      /* Élimine les espaces blancs */
+    }
+
+    .presentation-container {
+      display: flex;
+      /* flex-wrap: wrap; /* Permet le retour à la ligne */
+      gap: 20px;
+      /* Espacement entre les images */
+      justify-content: center;
+      /* Centre les images horizontalement */
+      align-items: stretch;
+      /* Uniformise la hauteur */
+    }
+
+    .presentation img {
+      width: 100%;
+      /* Occupe toute la largeur du conteneur */
+      height: 200px;
+      /* Définissez une hauteur fixe (ajustez selon vos besoins) */
+      object-fit: cover;
+      /* Recadre pour remplir la zone sans déformation */
+      border-radius: 8px;
+      /* Optionnel : coins arrondis pour le style */
+      display: block;
+      /* Élimine les espaces blancs */
+    }
+  </style>
+
+
+  <script>
+    /*--------------------------------------------------------------------------------------------------------- nav --*/
+    /*
+          document.addEventListener("DOMContentLoaded", () => {
+            // Sélectionnez la balise <nav>
+            const nav = document.querySelector("nav");
+
+            // Configuration des heures
+            const timeConfig = {
+              dayStart: 6, // Début du jour
+              nightStart: 14 // Début de la nuit
+            };
+
+            // Obtenez l'heure actuelle
+            const now = new Date();
+            const hour = now.getHours();
+
+            // Appliquez les styles selon l'heure
+            if (hour >= timeConfig.nightStart || hour < timeConfig.dayStart) {
+              nav.classList.add("night-mode"); // Style nuit
+            } else {
+              nav.classList.remove("night-mode"); // Style jour
+            }
+          });*/
+
+    /*---------------------------------------------------------------------------------------- parametre effet neon --*/
+    document.addEventListener("DOMContentLoaded", () => {
+      // Sélectionnez l'élément avec la classe .neon
+      const neonElement = document.querySelector(".neon");
+
+      // Configuration des heures
+      const timeConfig = {
+        dayStart: 6, // Début du style jour
+        nightStart: 12 // Début du style nuit
+      };
+
+      // Obtenez l'heure actuelle
+      const now = new Date();
+      const hour = now.getHours();
+
+      // Appliquez les styles selon l'heure
+      if (hour >= timeConfig.nightStart || hour < timeConfig.dayStart) {
+        neonElement.classList.add("night-mode"); // Applique le style nuit
+      } else {
+        neonElement.classList.remove("night-mode"); // Applique le style jour
+      }
+    });
+  </script>
+  <!------------------------------------------------------------------------------------------------------------------->
+
+  <!--------------------------------------------------------------------------------- body -->
+  <!--<script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const dayInput = document.getElementById("day-start");
+        const nightInput = document.getElementById("night-start");
+        const saveButton = document.getElementById("save-config");
+
+        // Charger la configuration depuis le LocalStorage
+        const loadConfig = () => {
+          const config = JSON.parse(localStorage.getItem("timeConfig"));
+          if (config) {
+            dayInput.value = config.dayStart;
+            nightInput.value = config.nightStart;
+          }
+        };
+
+        const saveConfig = () => {
+          const config = {
+            dayStart: parseInt(dayInput.value, 10),
+            nightStart: parseInt(nightInput.value, 10)
+          };
+          localStorage.setItem("timeConfig", JSON.stringify(config));
+          alert("Configuration sauvegardée !");
+          applyStyle(config);
+        };
+
+        const applyStyle = (config) => {
+          const now = new Date();
+          const hour = now.getHours();
+
+          if (hour >= config.nightStart || hour < config.dayStart) {
+            document.body.classList.add("night-mode");
+          } else {
+            document.body.classList.remove("night-mode");
+          }
+        };
+
+        // Initialiser
+        loadConfig();
+        saveButton.addEventListener("click", saveConfig);
+
+        // Appliquer les styles au chargement
+        const config = JSON.parse(localStorage.getItem("timeConfig")) || {
+          dayStart: 6,
+          nightStart: 18
+        };
+        applyStyle(config);
+      });
+    </script>
+
+    <script>
+      document.addEventListener("scroll", function() {
+        document.querySelectorAll('.section').forEach(function(el) {
+          if (el.getBoundingClientRect().top < script window.innerHeight) {
+            el.classList.add('visible');
+          }
+        });
+      });
+    </script> -->
+
+
+  <!------------------------------------------------------------------------------------------------------------------->
+
+</head>
+
+<body>
+  <!--<section class="neon">
+    </section>-->
+  <!-- En-tête de la page avec la navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg neon"><!-- neon -->
+      <div class="container-fluid ">
+        <!-- Logo du zoo -->
+        <div class="img-logo-1 rounded-3">
+          <img src="./public/asset/images/logo.jpg" class="logo " alt="logo zoo"><!--  -->
+        </div>
+
+        <!-- Menu de navigation principal -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-center ">
+            <li class="nav-item"><a class="nav-link" href="#presentation">Présentation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#habitats">Habitats</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#animaux">Animaux</a></li>
+            <li class="nav-item"><a class="nav-link" href="#avis">Avis</a></li>
+          </ul>
+
+          <!-- Lien pour l'accès administrateur -->
+          <div class="Navbar__Link">
+            <a class="nav-link nav-admin-link" href="./public/login.php" title="Admin">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-49 141 512 512" width="16" height="16" aria-hidden="true"
+                fill="currentColor" class="bi bi-unlock-fill">
+                <path d="M423 638H-9c-13.807 0-25-11.193-25-25 0-53.438 17.131-104.058 49.542-146.388 22.2-28.994 50.961-52.656 83.376-69.006C75.53 371.377 62 337.07 62 301c0-79.953 65.047-145 145-145s145 65.047 145 145c0 36.07-13.53 70.377-36.918 96.606 32.416 16.349 61.177 40.012 83.376 69.005C430.869 508.942 448 559.562 448 613c0 13.807-11.193 25-25 25zM17.657 588h378.687c-9.908-74.383-63.38-137.724-136.792-158.682a25 25 0 0 1-5.533-45.75C283.615 366.669 302 335.03 302 301c0-52.383-42.617-95-95-95s-95 42.617-95 95c0 34.03 18.386 65.668 47.981 82.568a25.003 25.003 0 0 1 12.423 24.712 25.003 25.003 0 0 1-17.956 21.038C81.037 450.276 27.564 513.617 17.657 588z"></path>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!------------------------------------------------------------------------------------------- application des heure--><!--
+    <div>
+      <label for="day-start">Début du jour (h) :</label>
+      <input type="number" id="day-start" min="0" max="23" value="6">
+      <label for="night-start">Début de la nuit (h) :</label>
+      <input type="number" id="night-start" min="0" max="23" value="18">
+      <button id="save-config">Sauvegarder</button>
+    </div>-->
+  <!------------------------------------------------------------------------------------------------------------------->
+
+
+  <!-- Contenu principal de la page -->
+  <main class="container-body">
+
+    <!-- Section Présentation --><!--
+    <section id="presentation" class="text-center my-4">
+      <h1>Bienvenue au Zoo Arcadia</h1>
+      <p>Découvrez notre zoo, entièrement indépendant en matière d'énergie et engagé envers l'écologie.</p>
+      <div class="images-presentation">
+        <img src="../public/asset/images/image5.jfif" alt="Image du zoo" class="img-fluid rounded">
+        <img src="../public/asset/images/image6.jfif" alt="Image des animaux" class="img-fluid rounded">
+        <img src="../public/asset/images/images7.jfif" alt="Image d'habitat" class="img-fluid rounded">
+      </div>
+    </section>-->
+
+    <!-- Section 1: Introduction -->
+    <section class="intro">
+      <div class="overlay"><!--class="slider"-->
+        <p class="intro-text">Bienvenue au Zoo Arcadia – Une aventure au cœur de la nature !</p>
+      </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------- Section Présentation -->
+    <!--<section id="presentation" class="container text-center py-5">
+      <h1>Bienvenue au Zoo Arcadia</h1>
+      <p>Découvrez notre zoo, entièrement indépendant en matière d'énergie et engagé envers l'écologie.</p>
+      <div class="presentation row">
+        <div class="presentation col-md-4 mb-4">
+          <img src="./public/asset/images/image5.jfif" alt="Presentation Image 1">
+        </div>
+        <div class="presentation col-md-4 mb-4">
+          <img src="./public/asset/images/image6.jfif" alt="Presentation Image 2">
+        </div>
+        <div class="presentation col-md-4">
+          <img src="./public/asset/images/images7.jfif" alt="Presentation Image 3">
+          <p>Description</p>
+        </div>
+      </div>
+    </section>-->
+
+<style>
+    /* Section À propos */
+#about {
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+}
+
+#about h2 {
+    margin-bottom: 1rem;
+    color: #2A7E50;
+}
+
+#about .about-image {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+</style>
+
+<!-- Section À propos -->
+    <section id="about">
+        <h2>Arcadia, un zoo engagé pour la planète</h2>
+        <p>Depuis 1960, nous nous engageons à protéger la biodiversité et à offrir un habitat naturel à nos animaux.</p>
+        <img src="./assets/images/Forest wallpaper midday.jpg" alt="Forêt de Brocéliande" class="about-image"><!-- forest.jpg -->
+    </section>
+
+
+    <!-------------------------------------------------------------------------------------------------re-utilisable---->
+    <!-- Section image à gauche, texte à droite -->
+    <section class="image-text-section image-left">
+      <div id="habitats" class="image">
+        <a href="./public/habitats.php">
+          <img src="./public/asset/images/image1.jpg" alt="Image gauche"  class="img-fluid"></a><!--./assets/images/Bientot dispon.png --><!-- https://via.placeholder.com/400 -->     
+        </div>
+      <div class="text">
+        <h2>Titre de la section Habitats</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+      </div>
+
+          <!--<div class="text-overlay">Description de l'habitat</div>
+          <div class="text-overlay animate-on-scroll">Description de l'habitat 3-B</div>-->
+
+    </section>
+
+    <!-- Section image à droite, texte à gauche -->
+    <section class="image-text-section image-right">
+      <div id="animaux" class="image">
+        <img src="./public/asset/images/image1.jpg" alt="Image droite"><!--./assets/images/Bientot dispon.png --><!-- https://via.placeholder.com/400 -->
+      
+        <!--<div class="text-overlay">Description de l'habitat 2</div>
+        <div class="text-overlay animate-on-scroll">Description de l'habitat 2</div>-->
+
+      </div>
+      <div class="text">
+        <h2>Titre de la section Services</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+      </div>
+    </section>
+
+    <!--<section class="image-text-section image-left">
+      <div id="animaux" class="image">
+        <img src="./assets/images/Bientot dispon.png" alt="Image gauche">--><!-- https://via.placeholder.com/400 --><!--
+      </div>
+      <div class="text">
+        <h2>Titre de la section </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+      </div>
+    </section>-->
+
+    <!-- section image decaler ------------------------------------------------->
+    <style>
+
+      .image-text-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0px;
+        /*20px*/
+        background: whitesmoke;
+
+
+        margin: 50px;
+      }
+
+      .image-text-section .image {
+        flex: 1;
+      }
+
+      .image-text-section .image img {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+        /*10px*/
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-text-section .text {
+        flex: 1;
+      }
+
+      .image-text-section .text h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .image-text-section .text p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      /* Image à gauche */
+      .image-left {
+        flex-direction: row;
+      }
+
+      /* Image à droite */
+      .image-right {
+        flex-direction: row-reverse;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .image-text-section {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .image-text-section .image,
+        .image-text-section .text {
+          flex: none;
+        }
+      }
+    </style>
+
+    <!--------------------------------------------------------------------------------------------- section Habitats -->
+    <!-- <section id="habitats" class="container py-5">
+      <h2 class="text-center mb-4">Nos Habitats</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">🌿 Savane</h5>
+              <p class="card-text">Un espace ouvert pour les animaux de la savane.</p>  -->
+
+              <!--<div class="col-md-4">-->  <!--
+              <img src="./assets/images/Bientot dispon.png" alt="Lion" class="img-fluid rounded shadow"> -->
+              <!--</div>--> <!--
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">🌳 Forêt tropicale</h5>
+              <p class="card-text">Découvrez la vie dans les forêts luxuriantes.</p>  -->
+
+              <!--<div class="col-md-4">--> <!--
+              <img src="./assets/images/Bientot dispon.png" alt="Lion" class="img-fluid rounded shadow"> -->
+              <!--</div>-->  <!--
+            </div>
+          </div>
+        </div> 
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">🏜️ Désert</h5>
+              <p class="card-text">Un habitat pour les animaux du désert.</p>  -->
+
+              <!--<div class="col-md-4">-->  <!--
+              <img src="./assets/images/Bientot dispon.png" alt="Lion" class="img-fluid rounded shadow">  -->
+              <!--</div>-->  <!--
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+
+
+
+
+
+
+    <!--------------------------------------------------------------------------------------------------------- Test -->
+    <!--<section id="habitats" class="py-5">
+      <h2>Nos Habitats</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="./public/asset/images/image1.jpg" alt="Habitat 1" class="img-fluid">
+          <p>Description de l'habitat 1.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="./public/asset/images/image1.jpg" alt="Habitat 2" class="img-fluid">
+          <p>Description de l'habitat 2.</p>
+        </div>
+        <div class="col-md-4">
+          <img src="./public/asset/images/image1.jpg" alt="Habitat 3" class="img-fluid">
+          <p>Description de l'habitat 3.</p>
+        </div>
+      </div>
+    </section> -->
+    <!------------------------------------------------------------------------------------->
+    <section id="habitats" class="py-5">
+      <h2>Nos Habitats</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image1.jpg" alt="Habitat 1" class="img-fluid">
+            <div class="text-overlay">Description de l'habitat 1 - test</div>
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 1</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image1.jpg" alt="Habitat 2" class="img-fluid"> <!-- chemin/vers/image_habitat2.jpg -->
+            <div class="text-overlay">Description de l'habitat 2</div>
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 2</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image1.jpg" alt="Habitat 3" class="img-fluid"> <!-- chemin/vers/image_habitat3.jpg -->
+            <div class="text-overlay">Description de l'habitat</div>
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 3-B</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <style>
+       .image-container .img-fluid {
+              width: 100%;
+      /* Occupe toute la largeur du conteneur */
+      height: 300px;
+      /* Définissez une hauteur fixe (ajustez selon vos besoins) */
+      object-fit: cover;
+      /* Recadre pour remplir la zone sans déformation */
+      border-radius: 8px;
+      /* Optionnel : coins arrondis pour le style */
+      display: block;
+      /* Élimine les espaces blancs */
+    }
+      </style>
+
+
+    <!------------------------------------------------------------------------------> <!--
+    <section id="habitats" class="py-5">
+      <h2>Nos Habitats</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image1.jpg" alt="Habitat 1" class="img-fluid">
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 1</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image1.jpg" alt="Habitat 2" class="img-fluid">
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 2</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image1.jpg" alt="Habitat 3" class="img-fluid">
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 3</div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+
+    <!-- style css -->
+    <style>
+      .image-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .text-overlay {
+        position: absolute;
+        bottom: 10px;
+        /* Ajustez la position verticale */
+        left: 10px;
+        /* Ajustez la position horizontale */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Fond semi-transparent */
+        color: #fff;
+        /* Couleur du texte */
+        padding: 5px 10px;
+        /* Espacement autour du texte */
+        font-size: 14px;
+        /* Taille du texte */
+        border-radius: 5px;
+        /* Coins arrondis */
+      }
+
+      /*-- effet animation sur le texte --*/
+      .text-overlay {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 3px solid white;
+        /* Curseur */
+
+        animation: typing 4s steps(30, end), blink 0.5s step-end infinite alternate;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        from {
+          border-color: transparent;
+        }
+
+        to {
+          border-color: white;
+        }
+      }
+
+      */
+      /*----------------------------------------------------------------------------------------- images avec texte --*/
+
+      .image-container {
+        position: relative;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+      }
+
+      .text-overlay {
+        position: absolute;
+        bottom: -50px;
+        /* Texte caché en bas */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+      }
+
+      .text-overlay.active {
+        animation: bounceUp 1.5s ease-out forwards;
+        /* Déclenche l'animation */
+      }
+
+      /*
+@keyframes bounceUp {
+  0% {
+    bottom: -50px; /* Départ */
+      /*
+    opacity: 0;
+  }
+  50% {
+    bottom: 50%; /* Milieu de l'image */
+      /*
+    transform: translateX(-50%) scale(1.1); /* Légère mise en avant */
+      /*
+    opacity: 1;
+  }
+  70% {
+    bottom: 45%; /* Rebond vers le bas */
+      /*
+  }
+  100% {
+    bottom: 50%; /* Fixé au milieu */
+      /*
+    transform: translateX(-50%) scale(1);
+  }
+}*/
+
+      /*--------------------------------------------------------------------------------------------------------------*/
+      .text-overlay {
+        position: absolute;
+        bottom: -50px;
+        /* Texte caché en bas */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-out, bottom 0.3s ease-out;
+      }
+
+      .text-overlay.active {
+        animation: bounceUp 1.5s ease-out forwards;
+        /* Déclenche l'animation */
+      }
+
+      @keyframes bounceUp {
+        0% {
+          bottom: -50px;
+          /* Départ */
+          opacity: 0;
+        }
+
+        50% {
+          bottom: 50%;
+          /* Milieu de l'image */
+          transform: translateX(-50%) scale(1.1);
+          /* Légère mise en avant */
+          opacity: 1;
+        }
+
+        70% {
+          bottom: 45%;
+          /* Rebond vers le bas */
+        }
+
+        100% {
+          bottom: 50%;
+          /* Fixé au milieu */
+          transform: translateX(-50%) scale(1);
+          opacity: 1;
+          /* Assurez-vous que le texte reste visible */
+        }
+      }
+    </style>
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!-- javascript -->
+    <script>
+      /*document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  });
+
+  elements.forEach((el) => observer.observe(el));
+});*/
+
+
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll(".animate-on-scroll");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Ajoute la classe pour déclencher l'animation
+                entry.target.classList.add("active");
+              } else {
+                // Supprime la classe lorsque l'élément sort de la vue
+                entry.target.classList.remove("active");
+              }
+            });
+          }, {
+            threshold: 0.5, // L'élément doit être au moins à moitié visible pour déclencher
+          }
+        );
+
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!--HTML Structure
+Ajoutez une classe spéciale au conteneur du texte que vous voulez animer.
+html
+Copier le code --> <!--
+<section id="habitats" class="py-5">
+  <h2>Nos Habitats</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="./public/asset/images/image1.jpg"" alt="Habitat 1" class="img-fluid"> --> <!-- chemin/vers/image_habitat1.jpg-->
+    <!-- <div class="text-overlay animate-on-scroll">Description de l'habitat 1</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="chemin/vers/image_habitat2.jpg" alt="Habitat 2" class="img-fluid">
+        <div class="text-overlay animate-on-scroll">Description de l'habitat 2</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="chemin/vers/image_habitat3.jpg" alt="Habitat 3" class="img-fluid">
+        <div class="text-overlay animate-on-scroll">Description de l'habitat 3</div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+    <!--
+________________________________________
+CSS Animations
+Ajoutez une animation qui fait remonter et rebondir le texte.
+css
+Copier le code --> <!--
+<style>
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: -50px; /* Texte caché en bas */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.text-overlay.active {
+  animation: bounceUp 1.5s ease-out forwards; /* Déclenche l'animation */
+}
+
+@keyframes bounceUp {
+  0% {
+    bottom: -50px; /* Départ */
+    opacity: 0;
+  }
+  50% {
+    bottom: 20%; /* Milieu de l'image */
+    transform: translateX(-50%) scale(1.1); /* Légère mise en avant */
+    opacity: 1;
+  }
+  70% {
+    bottom: 45%; /* Rebond vers le bas */
+  }
+  100% {
+    bottom: 20%; /* Fixé au milieu */
+    transform: translateX(-50%) scale(1);
+  }
+}
+</style> -->
+
+
+    <!--
+________________________________________
+JavaScript pour le Déclenchement
+Utilisez l'Intersection Observer API pour activer l'animation lorsque l'image entre dans le champ de vision.
+javascript
+Copier le code --> <!--
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  });
+
+  elements.forEach((el) => observer.observe(el));
+});
+</script>  -->
+    <!-- ________________________________________
+Explications
+1.	CSS :
+o	La classe .text-overlay place le texte en bas de l'image initialement.
+o	La classe .active est ajoutée par le JavaScript, déclenchant l'animation définie dans @keyframes bounceUp.
+2.	JavaScript :
+o	L'Intersection Observer surveille les éléments avec la classe .animate-on-scroll.
+o	Quand un élément entre dans le champ de vision, la classe active est ajoutée, activant l'animation.
+________________________________________ -->
+
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!--HTML Structure
+Ajoutez une classe spéciale au conteneur du texte que vous voulez animer.-->
+
+    <section id="habitats" class="py-5">
+      <h2>Nos Habitats</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image1.jpg" alt="Habitat 1" class="img-fluid"><!-- chemin/vers/image_habitat1.jpg -->
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 1</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image2.jfif" alt="Habitat 2" class="img-fluid">
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 2</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image3.jfif" alt="Habitat 3" class="img-fluid">
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 3</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--CSS Animations
+Ajoutez une animation qui fait remonter et rebondir le texte.-->
+    <style>
+      .image-container {
+        position: relative;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+      }
+
+      .text-overlay {
+        position: absolute;
+        bottom: -50px;
+        /* Texte caché en bas */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-out;
+      }
+
+      .text-overlay.active {
+        animation: bounceUp 1.5s ease-out forwards;
+        /* Déclenche l'animation */
+      }
+
+      @keyframes bounceUp {
+        0% {
+          bottom: -20px;
+          /* Départ 50% */
+          opacity: 0;
+        }
+
+        50% {
+          bottom: 20%;
+          /* Milieu de l'image 50% */
+          transform: translateX(-50%) scale(1.1);
+          /* Légère mise en avant -50% */
+          opacity: 1;
+        }
+
+        70% {
+          bottom: 20%;
+          /* Rebond vers le bas 50% */
+        }
+
+        100% {
+          bottom: 20%;
+          /* Fixé au milieu */
+          transform: translateX(-50%) scale(1);
+          /* -50% */
+        }
+      }
+    </style>
+
+    <!--JavaScript pour le Déclenchement
+Utilisez l'Intersection Observer API pour activer l'animation lorsque l'image entre dans le champ de vision.-->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll(".animate-on-scroll");
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        });
+
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
+
+
+
+    <!--**************************************************************************************************** sans rebond -->
+
+    <section id="habitats" class="py-5">
+      <h2>Nos Habitats</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image1.jpg" alt="Habitat 1" class="img-fluid"><!-- chemin/vers/image_habitat1.jpg -->
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 1</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image2.jfif" alt="Habitat 2" class="img-fluid"><!-- chemin/vers/image_habitat2.jpg -->
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 2</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-container">
+            <img src="./public/asset/images/image3.jfif" alt="Habitat 3" class="img-fluid"><!-- chemin/vers/image_habitat3.jpg -->
+            <div class="text-overlay animate-on-scroll">Description de l'habitat 3</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .image-container {
+        position: relative;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: auto;
+      }
+
+      .text-overlay {
+        position: absolute;
+        bottom: -50px;
+        /* Texte caché en bas */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+      }
+
+
+      .text-overlay.active {
+        animation: slideUp 1.5s ease-out forwards;
+        /* Déclenche l'animation */
+      }
+
+      @keyframes slideUp {
+        0% {
+          bottom: -20px;
+          /* Départ -50%*/
+          opacity: 0;
+        }
+
+        100% {
+          bottom: 5%;
+          /* Arrêt au milieu 50%*/
+          opacity: 1;
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll(".animate-on-scroll");
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        });
+
+        elements.forEach((el) => observer.observe(el));
+      });
+    </script>
+
+    <!--*******************************************************************-->
+
+
+
+
+
+
+
+
+
+
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------- section services offerts -->
+    <section id="services" class="container py-5">
+      <h2 class="text-center mb-4 mb-4">Services Offerts</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">🍽️ Restauration</h5>
+              <p class="card-text">Un espace pour dejeuner, une collation.</p>
+
+              <!--<div class="col-md-4">-->
+              <img src="./assets/images/image9_Rest.jpg" alt="Lion" class="img-fluid rounded shadow">
+              <!--</div>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">🛍️ Boutique de souvenirs</h5>
+              <p class="card-text">garder un souvenir, offrande.</p>
+
+              <!--<div class="col-md-4">-->
+              <img src="./assets/images/image-(9)_Bte.jfif" alt="Lion" class="img-fluid rounded shadow">
+              <!--</div>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">🧑‍🤝‍🧑 Visites guidées</h5>
+              <p class="card-text">visite du zoo.</p>
+
+              <!--<div class="col-md-4">-->
+              <img src="./assets/images/Bientot dispon.png" alt="Lion" class="img-fluid rounded shadow">
+              <!--</div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------------------------------------------------------------------------- section Animaux -->
+    <section id="animaux" class="container py-5">
+      <h2 class="text-center mb-4">Nos Animaux</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">🦁 Lion</h5>
+              <p class="card-text">Un espace ouvert pour les animaux de la savane.</p>
+
+              <!--<div class="col-md-4">-->
+              <img src="./public/asset/images/image1.jpg" alt="Lion" class="img-fluid rounded shadow">
+              <!--</div>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">🐘 Éléphant</h5>
+              <p class="card-text">Découvrez la vie dans les forêts luxuriantes.</p>
+              <!--<div class="col-md-4">-->
+              <img src="./public/asset/images/image2.jfif" alt="Éléphant" class="img-fluid rounded shadow">
+              <!--</div>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="card-body text-center">
+              <!--<div class="col-md-4">-->
+
+              <!--</div>-->
+
+              <h5 class="card-title">🦒 Girafe</h5>
+              <p class="card-text">Un habitat pour les animaux du désert.</p>
+              <!-- Lien autour de l'image -->
+              <!--<img src="./public/asset/images/image4.jfif" alt="Girafe" class="img-fluid rounded shadow">-->
+              <!-- test -->
+              <a href="./public/habitats.php" class="image-lien" target="_blank"> <!-- lien velide pour test:  https://www.example.com-->
+                <img src="./public/asset/images/image4.jfif" alt="Girafe" class="img-fluid rounded shadow">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------------------------------------------------------------------------- Teste -->
+    <section id="animaux" class="container py-5">
+      <h2 class="text-center mb-4">Nos Animaux</h2>
+      <div class="row">
+
+        <div class="col-md-4 col-sm-12 mb-4">
+          <div class="card">
+            <img src="./public/asset/images/image1.jpg" alt="Lion" class="img-fluid">
+            <div class="card-body text-center">
+              <h5 class="card-title">🦁 Lion</h5>
+              <p class="card-text">Un espace ouvert pour les animaux de la savane.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Répétez les colonnes pour d'autres animaux -->
+
+        <div class="col-md-4 col-sm-12 mb-4">
+          <div class="card">
+            <img src="./public/asset/images/image2.jfif" alt="Lion" class="img-fluid">
+            <div class="card-body text-center">
+              <h5 class="card-title">🐘 Éléphant</h5>
+              <p class="card-text">Découvrez la vie dans les forêts luxuriantes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12 mb-4">
+          <div class="card">
+            <img src="./public/asset/images/image4.jfif" alt="Lion" class="img-fluid">
+            <div class="card-body text-center">
+              <h5 class="card-title">🦒 Girafe</h5>
+              <p class="card-text">Un espace ouvert pour les animaux de la savane.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!--<section id="presentation" class="container text-center py-5">
+      <div class="presentation row">
+        <div class="presentation col-md-4 mb-4">
+          <img src="./public/asset/images/image1.jpg" alt="Presentation Image 1">
+        </div>
+        <div class="presentation col-md-4 mb-4">
+          <img src="./public/asset/images/image2.jfif" alt="Presentation Image 2">
+        </div>
+        <div class="presentation col-md-4">
+          <img src="./public/asset/images/image4.jfif" alt="Presentation Image 3">
+        </div>
+      </div>
+    </section> --><!---->
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!--<section id="presentation" class="text-center my-4"> --> <!--  --> <!--
+      <h2 class="text-center mb-4">Nos Animaux</h2>
+        <div class="images-presentation"> --> <!--  --> <!-- class="animal-grid" --> <!--
+          <img src="../public/asset/images/image1.jpg" alt="Lion" class="img-fluid rounded">
+          <img src="../public/asset/images/image2.jfif" alt="Éléphant" class="img-fluid rounded">
+          <img src="../public/asset/images/image4.jfif" alt="Girafe" class="img-fluid rounded">
+        </div>
+      </section> -->
+
+    <!-----------------<----------------------------------------------------------------------------------------------->
+
+    <!----------------------------------------------------------------------------------- Section Avis des visiteurs -->
+    <section id="avis" class="text-center my-4">
+      <h2>Avis des Visiteurs</h2>
+      <div class="avis-container">
+        <div class="avis">
+          <p>“Une expérience incroyable ! Les habitats sont magnifiques.”</p>
+          <cite>- Jean Dupont</cite>
+        </div>
+        <div class="avis">
+          <p>“Le zoo est bien entretenu et les animaux sont bien traités.”</p>
+          <cite>- Marie Curie</cite>
+        </div>
+      </div>
+      <button onclick="window.location.href='avis.html'" class="btn btn-primary mt-3">Voir tous les avis</button>
+    </section>
+  </main>
+
+  <!------------------------------------------------------------------------------------------------------------------->
+
+  <!-- Section Avis des visiteurs --> <!--
+<section id="avis" class="text-center my-4">
+  <h2>Avis des Visiteurs</h2>
+  <div class="avis-container">
+    <div class="avis">
+      <p>“Une expérience incroyable ! Les habitats sont magnifiques.”</p>
+      <cite>- Jean Dupont</cite>
+    </div>
+    <div class="avis">
+      <p>“Le zoo est bien entretenu et les animaux sont bien traités.”</p>
+      <cite>- Marie Curie</cite>
+    </div>
+    <div class="avis">
+      <p>“Un endroit parfait pour une sortie en famille !”</p>
+      <cite>- Paul Durand</cite>
+    </div>
+  </div> -->
+  <!-- Boutons de navigation --> <!--
+  <button class="carousel-btn prev">Précédent</button>
+  <button class="carousel-btn next">Suivant</button>
+  <button onclick="window.location.href='avis.html'" class="btn btn-primary mt-3">Voir tous les avis</button>
+</section> -->
+  <!------------------------------------------------------------------------------------------------------------------->
+  <style>
+
+  </style>
+
+  <script>
+
+  </script>
+
+  <!-- Testimonial Start --><!--
+    <div class="container-xxl py-5">
+      <div class="container">
+        <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Our Clients Say!</h1>
+        <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+          <div class="testimonial-item text-center">
+            <img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;">
+            <div class="testimonial-text rounded text-center p-4">
+              <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+              <h5 class="mb-1">Patient Name</h5>
+              <span class="fst-italic">Profession</span>
+            </div>
+          </div>
+          <div class="testimonial-item text-center">
+            <img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;">
+            <div class="testimonial-text rounded text-center p-4">
+              <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+              <h5 class="mb-1">Patient Name</h5>
+              <span class="fst-italic">Profession</span>
+            </div>
+          </div>
+          <div class="testimonial-item text-center">
+            <img class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;">
+            <div class="testimonial-text rounded text-center p-4">
+              <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+              <h5 class="mb-1">Patient Name</h5>
+              <span class="fst-italic">Profession</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  -->
+  <!-- Testimonial End -->
+
+  <!--<style>
+/*** Testimonial ***/
+.testimonial-carousel::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.testimonial-carousel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
+}
+
+.testimonial-carousel .owl-item .testimonial-text {
+    background: var(--light);
+    transform: scale(.8);
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background: var(--primary);
+    transform: scale(1);
+}
+
+.testimonial-carousel .owl-item .testimonial-text *,
+.testimonial-carousel .owl-item .testimonial-item img {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    color: var(--light) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item img {
+    border-color: var(--primary) !important;
+} 
+
+.testimonial-carousel .owl-nav {
+    position: absolute;
+    width: 350px;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: .5s;
+    z-index: 1;
+}
+
+.testimonial-carousel:hover .owl-nav {
+    width: 300px;
+    opacity: 1;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    position: relative;
+    color: var(--primary);
+    font-size: 45px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    color: var(--dark);
+}
+
+      </style>-->
+
+  <!-------------------------------------------------------------------------------------------------- Facts Start --><!--
+    <div class="container-xxl bg-primary facts my-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container-B py-5">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                    <i class="fa fa-paw fa-3x text-primary mb-3"></i>
+                    <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+                    <p class="text-white mb-0">Total Animal</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                    <i class="fa fa-users fa-3x text-primary mb-3"></i>
+                    <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+                    <p class="text-white mb-0">Daily Vigitors</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <i class="fa fa-certificate fa-3x text-primary mb-3"></i>
+                    <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+                    <p class="text-white mb-0">Total Membership</p>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <i class="fa fa-shield-alt fa-3x text-primary mb-3"></i>
+                    <h1 class="text-white mb-2" data-toggle="counter-up">12345</h1>
+                    <p class="text-white mb-0">Save Wild Life</p>
+                </div>
+            </div>
+        </div>
+    </div>-->
+  <!---------------------------------------------------------------------------------------------------- Facts End -->
+
+  <!---------------------------------------------------------- Pied de page avec liens de contact et réseaux sociaux -->
+  <section class="footer">
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row text-center text-md-left">
+          <!-- Contact du zoo -->
+          <div class="col-12 col-md-4 mb-3">
+            <section>
+              <h5>Contact</h5>
+              <ul class="list-unstyled-footer">
+                <li><a href="#" class="text-white"></a>Zoo Arcadia</li><!-- Ailes Enchantées -->
+                <li>Fôret de Brocéliande</li><!-- 123 Rue Lepidoptère -->
+                <li>35380 Paimpont, France</li><!-- -->
+                <li>Téléphone : +33 1 23 45 67</li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- Liens d'information -->
+          <div class="col-12 col-md-4 mb-3">
+            <section>
+              <h5>Informations</h5>
+              <ul class="list-unstyled-footer">
+                <li><a href="../index.html" class="text-white">Accueil</a></li>
+                <li><a href="../rgpd/mentions_légales.html" class="text-white">Mentions légales</a></li>
+                <li><a href="./a-propos-ecf.html" class="text-white">À propos de cette ECF</a></li>
+              </ul>
+            </section>
+          </div>
+
+          <!-- Liens vers les réseaux sociaux -->
+          <div class="col-12 col-md-4 mb-3">
+            <section>
+              <h5>Suivez-nous</h5>
+              <ul class="list-unstyled-footer">
+                <li><a href="http://www.facebook.fr" class="text-white me-3"><i class="fab fa-facebook-f">fa</i></a></li>
+                <li><a href="http://www.twitter.fr" class="text-white me-3"><i class="fab fa-twitter"></i>tw</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <footer class="text-center py-4">
+          <p>&copy; 2024 Zoo Arcadia. Tous droits réservés.</p>
+        </footer>
+      </div>
+    </footer>
+  </section>
+
+  <!------------------------------------------------------------ Scripts JavaScript nécessaires, y compris Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!--------------------------------------------------------->
+  <!-- JavaScript Libraries --><!--
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script> -->
+
+  <!-- Template Javascript --><!--
+    <script src="js/main.js"></script>-->
+
+  <!--------------------------------------------------------->
+
+  <!-- Lien Test carousel avis --><!--
+    <script src="./Avis/script.js"></script>-->
+
+</body>
+
+</html>
+
+
+
+
+
+
+<!--<style>
+/* Pied de page */
+footer {
+  background-color: #2b2b2b;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+footer h5 {
+  color: #f2a007;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  color: #f2a007;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Taille du texte réduite pour les petits écrans *//*
+  #presentation h1 {
+    font-size: 2rem;
+  }
+
+  #presentation p, section h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Ajustement des grilles d'images *//*
+  .images-presentation img, .animal-grid img {
+    max-width: 120px;
+  }
+
+  /* Centrage des éléments de navigation *//*
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }*/
+
+  /* Pied de page en mode pile */
+  footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Logo et images encore plus réduits pour mobiles *//*
+  .img-logo-1 img {
+    max-width: 80px;
+
+  }*/
+
+ /* section img .col-md-4 .container .presentation {
+    flex-direction: column;
+    justify-content: space-around;
+        margin-bottom: 10px;
+  }*/
+
+  /*.nav-admin-link {
+text-align: center;
+  }
+
+  .images-presentation img, .animal-grid img {
+    max-width: 100px;
+  }*/
+
+  /* Ajustement de la taille des sections de texte *//*
+  #presentation h1 {
+    font-size: 1.5rem;
+  }
+
+  #presentation p, section h2 {
+    font-size: 1.2rem;
+  }*/
+
+  /* Footer centré */
+  footer ul {
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Sections du footer en colonne */
+  footer .col-md-4 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  /*----------------------*/
+  .list-unstyled-footer {
+    text-align: center;
+  }
+  /*----------------------*/
+
+}
+
+.list-unstyled {
+  text-align: left;
+}
+ 
+/*----------------------------------*/
+ul,.list-unstyled-footer {
+  text-align: left !important;/*left*/
+}
+/*----------------------------------*/
+
+</style>-->
+
+
+
+<!-- image lien externe au survol -->
+<style>
+  /* Style de base pour l'image */
+  .image-lien img {
+    width: 300px;
+    /* Taille de l'image */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Animation */
+  }
+
+  /* Effet au survol */
+  .image-lien:hover img {
+    transform: scale(1.1);
+    /* Agrandit légèrement l'image */
+    opacity: 0.8;
+    /* Rend l'image légèrement transparente */
+  }
+
+  /* Supprime la bordure par défaut des liens */
+  .image-lien {
+    text-decoration: none;
+  }
+</style>

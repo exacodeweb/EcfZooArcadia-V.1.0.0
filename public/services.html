@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services du Zoo-Arcadia</title>
+    <!--<link rel="stylesheet" href="./styles.css">-->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+#services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.service-card h3 {
+  margin-top: 0;
+}
+
+.service-card button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.service-card button:hover {
+  background-color: #c0392b;
+}
+</style>
+
+
+</head>
+<body>
+    <h1>Services du Zoo-Arcadia</h1>
+    <div id="services-container"></div>
+
+    <h2>Ajouter un service</h2>
+    <form id="add-service-form">
+        <input type="text" id="nom" placeholder="Nom du service" required>
+        <textarea id="description" placeholder="Description du service" required></textarea>
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <script src="scripts.js"></script>
+    <script src="js/service.js"></script>
+</body>
+</html>
+
+<!--mise a jour-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services du Zoo-Arcadia</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <div class="service-container">
+        <h1>Services du Zoo-Arcadia</h1>
+
+        <!-- Liste des services -->
+        <h2>Liste des services disponibles</h2>
+        <ul id="services-list">
+            <!-- Les services seront chargés dynamiquement ici -->
+        </ul>
+
+        <!-- Formulaire pour ajouter un service -->
+        <h2>Ajouter un service</h2>
+        <form id="add-service-form">
+            <label for="service-name">Nom du service</label><br>
+            <input type="text" id="service-name" name="nom" required><br><br>
+
+            <label for="service-description">Description du service</label><br>
+            <textarea id="service-description" name="description" rows="4" required></textarea><br><br>
+
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
+    <script src="../assets/js/scripts.js"></script>
+</body>
+</html>
+

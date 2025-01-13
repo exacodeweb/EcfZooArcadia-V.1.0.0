@@ -1,0 +1,103 @@
+.text-center {
+  text-align: center;
+}
+
+.avis-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.avis {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+button.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+#avis {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/*.avis {
+  display: inline-block;
+  max-width: 300px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  text-align: left;
+  flex-shrink: 0; /* Empêche la réduction de la largeur *//*
+}*/
+
+.avis-scroll-container {
+  overflow: hidden; /* Masquer la scroll-bar */
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.avis-container {
+  display: inline-flex;
+  gap: 20px;
+}
+
+.avis {
+  flex: 0 0 300px; /* Largeur fixe de 300px */
+  max-width: 300px;
+  padding: 15px;
+  border: 1px solid #ddd;/*#ddd*/
+  border-radius: 8px;
+  background: #f9f9f9;
+  text-align: center;/*left*/
+  box-sizing: border-box;
+}
+
+.avis p {
+  font-style: italic;
+}
+
+.avis cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #555;
+}

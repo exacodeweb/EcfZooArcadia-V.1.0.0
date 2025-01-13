@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* Styles globaux */
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      transition: transform 0.3s ease;
+    }
+
+    /* Alignement du logo et du bouton hamburger */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    /* Logo */
+    .logo {
+      height: 50px;
+      /* Ajustez la taille selon votre logo */
+    }
+
+    /* Bouton hamburger */
+    .menu-toggle {
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      /* Masquer par défaut sur les grands écrans */
+    }
+
+    /* Lien de navigation */
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Bouton CTA */
+    .nav-links .cta-btn {
+      background-color: #ff6b6b;
+      padding: 10px 15px;
+      border-radius: 5px;
+      color: white;
+    }
+
+    /* Navigation responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 70px;
+        /* Ajustez selon la hauteur du header */
+        right: 0;
+        width: 100%;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .nav-links.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+/*
+    .menu-toggle {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+*//*
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-toggle span:nth-child(1) {
+  transform-origin: top left;
+}
+
+.menu-toggle span:nth-child(3) {
+  transform-origin: bottom left;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}*/
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <img src="./public/assets/images/Logo-Arcadia-(2).jpg" alt="Logo Zoo Arcadia" class="logo">
+
+      <!-- Bouton Hamburger -->
+      <!--<span class="menu-toggle" id="menuToggle">☰</span>-->
+      <span class="menu-toggle" id="menuToggle" aria-expanded="false" role="button" aria-label="Toggle navigation">☰</span>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#habitats">Habitats</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#reservation" class="cta-btn">Réserver</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+
+
+
+
+
+
+
+
+
+    //menuToggle.addEventListener('click', () => {
+  //const isExpanded = navLinks.classList.toggle('show');
+  //menuToggle.setAttribute('aria-expanded', isExpanded);
+//});
+
+
+//menuToggle.addEventListener('click', () => {
+  //navLinks.classList.toggle('show');
+  //menuToggle.classList.toggle('open');
+//});
+
+    });
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

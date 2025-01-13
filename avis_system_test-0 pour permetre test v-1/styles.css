@@ -1,0 +1,19 @@
+.avis-scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.avis-container {
+  display: flex;
+  gap: 20px;
+}
+
+.avis {
+  min-width: 300px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

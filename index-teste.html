@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Arcadia</title>
+    <link rel="stylesheet" href="styles-test.css">
+
+    <style>
+       .intro-text {/*.hero .content*/
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+    </style>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!--<div class="logo">Logo</div>-->
+
+          <!-- Logo du zoo 
+          <div class="logo">-->
+            <img src="./public/asset/images/logo.jpg" class="logo " width="100"  height="100" alt="logo zoo"><!--
+          </div>-->
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#animaux">Animaux</a></li>
+                <li><a href="#habitats">Habitats</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#billetterie">Billetterie</a></li>
+                <li><a href="./public/contact/contact.html">Contact</a></li><!-- #contact -->
+
+
+                <!-- Lien pour l'accès administrateur -->
+                <div class="Navbar__Link">
+                  <a class="nav-link nav-admin-link" href="./public/login.php" title="Admin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-49 141 512 512" width="16" height="16" aria-hidden="true"
+                      fill="currentColor" class="bi bi-unlock-fill">
+                      <path d="M423 638H-9c-13.807 0-25-11.193-25-25 0-53.438 17.131-104.058 49.542-146.388 22.2-28.994 50.961-52.656 83.376-69.006C75.53 371.377 62 337.07 62 301c0-79.953 65.047-145 145-145s145 65.047 145 145c0 36.07-13.53 70.377-36.918 96.606 32.416 16.349 61.177 40.012 83.376 69.005C430.869 508.942 448 559.562 448 613c0 13.807-11.193 25-25 25zM17.657 588h378.687c-9.908-74.383-63.38-137.724-136.792-158.682a25 25 0 0 1-5.533-45.75C283.615 366.669 302 335.03 302 301c0-52.383-42.617-95-95-95s-95 42.617-95 95c0 34.03 18.386 65.668 47.981 82.568a25.003 25.003 0 0 1 12.423 24.712 25.003 25.003 0 0 1-17.956 21.038C81.037 450.276 27.564 513.617 17.657 588z"></path>
+                    </svg>
+                  </a>
+                </div>
+            </ul>
+        </nav>
+        <button class="cta">Achetez vos billets</button>
+    </header>
+
+    <!-- Section 1: Introduction -->
+    <section class="intro">
+        <div class="overlay"><!--class="slider"-->
+            <p class="intro-text">Bienvenue au Zoo Arcadia – Une aventure au cœur de la nature !</p>
+        </div>
+    </section>
+
+    <!-- Section 2: Présentation des habitats et animaux -->
+    <section class="habitats">
+        <h2 id="habitats"  class="card-title">Nos Habitats et Animaux</h2>
+        <div class="grid">
+
+            <div class="card">
+                <!--<div class="image-placeholder"></div>-->
+                <!--<a href="public/habitats.php" class="image-lien" target="_blank">
+                 <img src="./public/asset/images/images7.jfif" alt="Habitats"></a>--><!--class="image-placeholder" class="img-fluid rounded shadow"--><!-- ./assets/images/img-default.jpg -->
+                
+                </a><a href="public/habitats.php" class="image-lien" id="habitats"><!--  target="_blank" -->
+                  <img src="./public/asset/images/images7.jfif" alt="Habitats" class="img-fluid rounded shadow">
+                </a>
+
+                <h3>Habitat 1 <!--🌿 Savane--></h3>
+                <p>Découvrez les merveilles de cet habitat.</p>
+                <!--<button><a href="./public/habitats.php"></a> En savoir plus</button>-->
+                <a href="./public/habitats.php"><button> En savoir plus</button></a><!-- ./public/habitats.php -->
+            </div>
+            
+            <!--<div class="card"> -->
+                <!--<div class="image-placeholder"></div>--> <!--
+                <img src="./assets/images/img-default.jpg" alt="Lion">
+               <h3>Habitat 2 --> <!--🌳 Forêt tropicale--> <!-- </h3>
+                <p>Explorez ce lieu unique.</p>
+                <button>En savoir plus</button>
+            </div> --->
+
+            <!--------------------------------------------------------------------- Ajoutez d'autres cartes ici --> <!--
+            <div class="card">  -->
+              <!--<div class="image-placeholder"></div>-->
+              <!--<img src="./assets/images/img-default.jpg" alt="Lion">--> <!--
+
+              <a href="./public/services.php" class="image-lien"> --> <!-- target="_blank" lien velide pour test:  https://www.example.com-->
+               <!-- <img src="./public/asset/images/image4.jfif" alt="Girafe" class="img-fluid rounded shadow">  
+              </a>
+
+              <h3>Animaux 3 -->  <!--Habitat 3--> <!--🏜️ Désert--> <!-- </h3>
+              <p>Explorez ce lieu unique.</p>
+              <button>En savoir plus</button>
+            </div> ---------------------------------------------------------------------------------------------------->
+
+        </div>
+    </section>
+
+    <!-- Section 2: Présentation des habitats et animaux --> <!--
+    <section class="habitats">  
+      <h2 class="card-title"> -->  <!--Nos Habitats et Animaux--> <!--  Notre Zoo</h2> 
+      <div class="grid">
+          <div class="card">  -->
+              <!--<div class="image-placeholder"></div>-->  <!--
+              <img src="./assets/images/image1.jpg" alt="Lion"> --> <!--class="image-placeholder" class="img-fluid rounded shadow"-->
+              <!--<h3>Habitat 1 🌿 Savane</h3>-->  <!--
+              <h3>Nos Habitats</h3>
+              <p>Découvrez les merveilles de cet habitat.</p>
+              <button>En savoir plus</button>
+          </div>
+
+          <div class="card"> -->
+              <!--<div class="image-placeholder"></div>-->  <!--
+              <img src="./assets/images/img-default.jpg" alt="Lion">
+
+              <div class="text-overlay animate-on-scroll">Description de l'habitat 2</div>-->
+
+              <!--<h3>Habitat 2 🌳 Forêt tropicale</h3>-->  <!--
+            <h3>Nos Services</h3>
+
+              <p>Explorez ce lieu unique.</p>
+              <button>En savoir plus</button>
+          </div> -->
+
+          <!-- Ajoutez d'autres cartes ici --> <!--
+          <div class="card"> -->
+            <!--<div class="image-placeholder"></div>--> <!--
+            <img src="./assets/images/img-default.jpg" alt="Lion"> -->
+            <!--<h3>Habitat 3 🏜️ Désert</h3>--> <!--
+
+              <h3>Nos Animaux</h3>
+            <p>Explorez ce lieu unique.</p>
+            <button>En savoir plus</button>
+          </div>
+
+          <div class="col-md-4">
+            <div class="image-container">
+              <img src="./public/asset/images/image1.jpg" alt="Habitat 2" class="img-fluid">
+              <div class="text-overlay animate-on-scroll">Description de l'habitat 2, --> <!--<p>,L'animal vie en général dans un environnements adapté a sont milieux d'origines</p>-->  </div>
+            <!--
+            </div>
+              <div class="text-overlay">Description de l'animal</div>
+               <p>animate-on-scroll </p>    
+                      
+          </div>
+      </div>
+   </section> -->
+
+    <!-- Section 1: Introduction --><!--
+    <section class="intro">
+      <div class="overlay">--><!--class="slider"--><!--
+          <p class="intro-text">Bienvenue au Zoo Arcadia – Une aventure au cœur de la nature !</p>
+      </div>
+  </section>-->
+
+  <!---------------------------------------------------------------- Section 2: Présentation des habitats et animaux -->
+  <!--<section class="habitats">
+      <h2 id="animaux"  class="card-title">Nos Habitats et Animaux</h2>
+      <div class="grid"> -->
+
+          <!-- <div class="card">  -->
+              <!--<div class="image-placeholder"></div>-->
+              <!--<a href="public/habitats.php" class="image-lien" target="_blank">
+               <img src="./public/asset/images/images7.jfif" alt="Habitats"></a>--><!--class="image-placeholder" class="img-fluid rounded shadow"--><!-- ./assets/images/img-default.jpg -->
+              <!--
+              </a><a href="public/habitats.php" class="image-lien" id="habitats"> --> <!--  target="_blank" --> <!--
+                <img src="./public/asset/images/images7.jfif" alt="Habitats" class="img-fluid rounded shadow">
+              </a>
+
+              <h3>Habitat 1 --> <!--🌿 Savane-->  <!-- </h3>
+              <p>Découvrez les merveilles de cet habitat.</p>  -->
+              <!--<button><a href="./public/habitats.php"></a> En savoir plus</button>--> <!--
+              <a href="./public/habitats.php"><button> En savoir plus</button></a> --> <!-- ./public/habitats.php -->  <!--
+          </div>  -->
+          
+          <!--------------------------------------------------------------------------------------<div class="card"> -->
+              <!--<div class="image-placeholder"></div>--> <!--
+              <img src="./assets/images/img-default.jpg" alt="Lion">
+             <h3>Habitat 2 --> <!--🌳 Forêt tropicale--> <!-- </h3>
+              <p>Explorez ce lieu unique.</p>
+              <button>En savoir plus</button>
+          </div> --->
+
+
+
+          <!-- Ajoutez d'autres cartes ici -->  <!--
+          <div class="card">   -->
+            <!--<div class="image-placeholder"></div>-->
+            <!--<img src="./assets/images/img-default.jpg" alt="Lion">-->  <!--
+
+            <a href="./public/services.php" class="image-lien" id="services"> --> <!-- target="_blank" lien velide pour test:  https://www.example.com-->
+             <!--<img src="./public/asset/images/image4.jfif" alt="Girafe" class="img-fluid rounded shadow">
+            </a>  --> <!--
+
+            <h3>Animaux 3 --> <!--Habitat 3--> <!--🏜️ Désert-->  <!--  </h3>
+            <p>Explorez ce lieu unique.</p>
+            <button>En savoir plus</button>
+          </div>  ----------------------------------------------------------------------------------------------------->
+          <!--
+      </div>
+  </section>-->
+ 
+
+
+    <!-- Section 3: Services --> 
+    <section class="services">
+        <h2 class="card-title">Nos Services</h2>
+        <div class="icons">
+            <div class="icon">
+                <!--<div class="icon-placeholder"></div>-->
+                <img  class="icon-placeholder" src="./public/asset/images/image1.jpg" alt="Lion"> <!-- ./assets/images/img-default.jpg -->
+                <p>Service 1 Visite guidées</p>
+                <!--<p>🧑‍🤝‍🧑 Visites guidées</p>-->
+            </div><!--
+            <div class="icon">-->
+                <!--<div class="icon-placeholder"></div>--><!--
+                <img  class="icon-placeholder" src="./assets/images/img-default.jpg" alt="Lion">
+                <p>Service 2</p>
+            </div>-->
+            <!-- Ajoutez d'autres icônes ici -->
+            <div class="icon">
+              <!--<div class="icon-placeholder"></div>-->
+              <img  class="icon-placeholder" src="./assets/images/img-default.jpg" alt="Lion">
+              <p>Service 3 Restauration</p>
+              <!--<p>🍽️ Restauration</p>-->
+          </div>
+          <div class="icon">
+            <!--<div class="icon-placeholder"></div>-->
+            <img  class="icon-placeholder" src="./assets/images/img-default.jpg" alt="Lion">
+            <p>Service 4 Boutiques</p>
+            <!--<p> 🛍️ Boutique de souvenirs</p>-->
+          </div>
+
+        </div>
+           <a href="./public/services.php"><button> En savoir plus</button></a><!-- ./public/habitats.php -->       
+    </section>
+
+    <!-- Section 4: Avis des visiteurs -->
+    <section class="testimonials">
+        <h2>Avis des visiteurs</h2>
+        <div class="carousel">
+            <p>Témoignage 1</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <button class="cta">Laissez un avis</button>
+    </section>
+
+    <!------------------------------------------------------------------------------------------------------- Footer --> 
+    <footer class="footer">
+        <div class="practical-info">
+            <p>Horaires: 9h - 18h</p>
+            <p>Localisation: 123 Rue des Animaux</p>
+            <p>Contact: info@zooarcadia.fr</p>
+        </div>
+        <div class="social-media">
+            <p>Suivez-nous :</p>
+            <div class="icons">  
+                <!-- Placez ici les icônes des réseaux sociaux --> 
+            </div>
+        </div>
+        <div class="legal">
+            <p>Mentions légales</p>
+        </div>
+    </footer> 
+    
+  <!-- Pied de page avec liens de contact et réseaux sociaux -->
+  <footer class="footer text-white"><!-- class="bg-dark text-white py-4" -->
+    <div class="footer-container"> <!--   -->
+      <div class="row text-center text-md-left">
+        <!-- Contact du zoo -->
+        <div class="col-12 col-md-4 mb-3"><!--   social-media-->
+          <section>
+            <h5>Contact</h5>
+            <ul class="list-unstyled-footer">
+              <li><a href="#" class="text-white">Ailes Enchantées</a></li>
+              <li>123 Rue des animaux</li>
+              <li>75001 Paris, France</li>
+              <li>Téléphone : +33 1 23 45 67</li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Liens d'information -->
+        <div class="col-12 col-md-4 mb-3"><!--   social-media-->
+          <section>
+            <h5>Informations</h5>
+            <ul class="list-unstyled-footer">
+              <li><a href="../index.html" class="text-white">Accueil</a></li>
+              <li><a href="../rgpd/mentions_légales.html" class="text-white">Mentions légales</a></li>
+              <li><a href="./a-propos-ecf.html" class="text-white">À propos de cette ECF</a></li>
+            </ul>
+
+            <ul class="list-unstyled-footer">
+              <li><a href="../index.html" >Accueil</a></li>
+              <li><a href="../rgpd/mentions_légales.html" >Mentions légales</a></li>
+              <li><a href="./a-propos-ecf.html" >À propos de cette ECF</a></li>
+            </ul>
+          </section>
+        </div>
+
+        <!-- Liens vers les réseaux sociaux -->
+        <div class="col-12 col-md-4 mb-3"><!--  -->
+          <section>
+            <h5>Suivez-nous</h5>
+            <a href="http://www.facebook.fr" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="http://www.twitter.fr" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          </section>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+<!-- Pied de page avec liens de contact et réseaux sociaux -->
+<footer class="bg-dark text-white py-4">
+  <!--<footer class="footer-container">-->
+    <div class="row text-center text-md-left">
+      <!-- Contact du zoo -->
+      <div class="col-12 col-md-4 mb-3">
+        <section>
+          <h5>Contact</h5>
+          <ul class="list-unstyled-footer">
+            <li><a href="#" class="text-white"></a>Zoo Arcadia</li><!-- Ailes Enchantées -->
+            <li>Fôret de Brocéliande</li><!-- 123 Rue Lepidoptère -->
+            <li>35380 Paimpont, France</li><!-- -->
+            <li>Téléphone : +33 1 23 45 67</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Liens d'information -->
+      <div class="col-12 col-md-4 mb-3">
+        <section>
+          <h5>Informations</h5>
+          <ul class="list-unstyled-footer">
+            <li><a href="../index.html" class="text-white">Accueil</a></li>
+            <li><a href="../rgpd/mentions_légales.html" class="text-white">Mentions légales</a></li>
+            <li><a href="./a-propos-ecf.html" class="text-white">À propos de cette ECF</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Liens vers les réseaux sociaux -->
+      <div class="col-12 col-md-4 mb-3">
+        <section>
+          <h5>Suivez-nous</h5>
+          <a href="http://www.facebook.fr" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="http://www.twitter.fr" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+        </section>
+      </div>
+    </div>
+
+<footer class="text-center py-4">
+<p>&copy; 2024 Zoo Arcadia. Tous droits réservés.</p>
+</footer>
+</footer>
+  <!---------------------------------------------------------- Pied de page avec liens de contact et réseaux sociaux -->
+  <section class="footer">
+    <footer class="bg-dark text-white py-4">
+      <!--<div class="footer-container">-->
+        <div class="row text-center text-md-left">
+          <!-- Contact du zoo -->
+          <div class="col-12 col-md-4 mb-3">
+            <section>
+              <h5>Contact</h5>
+              <ul class="list-unstyled-footer">
+                <li><a href="#" class="text-white"></a>Zoo Arcadia</li><!-- Ailes Enchantées -->
+                <li>Fôret de Brocéliande</li><!-- 123 Rue Lepidoptère -->
+                <li>35380 Paimpont, France</li><!-- -->
+                <li>Téléphone : +33 1 23 45 67</li>
+              </ul>
+            </section>
+          </div>
+  
+          <!-- Liens d'information -->
+          <div class="col-12 col-md-4 mb-3">
+            <section>
+              <h5>Informations</h5>
+              <ul class="list-unstyled-footer">
+                <li><a href="../index.html" class="text-white">Accueil</a></li>
+                <li><a href="../rgpd/mentions_légales.html" class="text-white">Mentions légales</a></li>
+                <li><a href="./a-propos-ecf.html" class="text-white">À propos de cette ECF</a></li>
+              </ul>
+            </section>
+          </div>
+  
+          <!-- Liens vers les réseaux sociaux -->
+          <div class="col-12 col-md-4 mb-3">
+            <section>
+              <h5>Suivez-nous</h5>
+              <ul class="list-unstyled-footer">
+                <li><a href="http://www.facebook.fr" class="text-white me-3"><i class="fab fa-facebook-f">fa</i></a></li>
+                <li><a href="http://www.twitter.fr" class="text-white me-3"><i class="fab fa-twitter"></i>tw</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+  
+        <footer class="text-center py-4">
+          <p>&copy; 2024 Zoo Arcadia. Tous droits réservés.</p>
+        </footer>
+      <!--</div>-->
+    </footer>
+    </section>
+
+</body>
+</html>
+ 
+
+<!-- Liens vers les réseaux sociaux --><!---
+<div class="col-12 col-md-4 mb-3">
+  <section>
+    <h5>Suivez-nous</h5>
+    <a href="http://www.facebook.fr" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+    <a href="http://www.twitter.fr" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+  </section>
+</div>
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-twitter"></i>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

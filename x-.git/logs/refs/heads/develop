@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 8e10877beac38def7a491dccbbddfeaa67e479b6 Franck Giet <franck.giet@gmail.com> 1728650001 +0200	commit (initial): Initial commit ajout des fichiers projet
+8e10877beac38def7a491dccbbddfeaa67e479b6 b8592539e8bf13b923170f28538f00fc43d8464c Franck Giet <franck.giet@gmail.com> 1728672801 +0200	commit: Supprime le dossier .git---------xxx du suivi Git
+b8592539e8bf13b923170f28538f00fc43d8464c 34f64522abe25818bcd3c15be41ce85d856bd4f1 Franck Giet <franck.giet@gmail.com> 1736791761 +0100	commit: Commit initial, Ajout du fichier index.php pour le test
