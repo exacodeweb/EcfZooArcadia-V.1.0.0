@@ -21,8 +21,8 @@
                 </tr>
             </thead>
             <tbody>
-                <?php
-                $stmt = $pdo->query("SELECT auteur, message, date_creation FROM Avis WHERE statut = 'valide' ORDER BY date_creation DESC LIMIT 10");
+                <?php// Avis
+                $stmt = $pdo->query("SELECT auteur, message, date_creation FROM avis WHERE statut = 'valide' ORDER BY date_creation DESC LIMIT 10");
                 $avisValides = $stmt->fetchAll();
 
                 foreach ($avisValides as $avis): ?>
@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
       die("Erreur de connexion : " . $conn->connect_error);
   }
   
-  // Récupérer les 10 derniers avis approuvés
-  $query = "SELECT nom, message, dateSoumission FROM Avis WHERE statut = 'approuve' ORDER BY dateSoumission DESC LIMIT 10";
+  // Récupérer les 10 derniers avis approuvés //Avis
+  $query = "SELECT nom, message, dateSoumission FROM avis WHERE statut = 'approuve' ORDER BY dateSoumission DESC LIMIT 10";
   $result = $conn->query($query);
   ?>
   

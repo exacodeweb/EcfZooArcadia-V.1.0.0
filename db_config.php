@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$dbname = "zoo_arcadia";
-$user = "root";
-$password = "G1i9e6t3"; // Mettez le mot de passe si nécessaire
+$dbname = "zoo_arcadia";//
+$user = "utilisateur_zoo";//root
+$password = "Z00_Arcadia!2024"; // Mettez le mot de passe si nécessaire //G1i9e6t3
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $password);

@@ -1,12 +1,10 @@
-
-
 <?php
 session_start();
 
 // Vérification si l'utilisateur est connecté et a le rôle d'employé
 if ($_SESSION['role'] !== 'employe') {
-    header("Location: ../config/login.php");
-    exit;
+  header("Location: ../config/login.php");
+  exit;
 }
 
 // Connexion à la base de données
@@ -14,13 +12,13 @@ require '../public/utilise.php';
 
 // Vérification de la connexion PDO
 if (!isset($pdo)) {
-    die("Erreur : La connexion à la base de données n'est pas disponible.");
+  die("Erreur : La connexion à la base de données n'est pas disponible.");
 }
 
 // Vérification si l'utilisateur est connecté via session
 if (!isset($_SESSION['user_id'])) {
-    header('Location: ../config/login.php');
-    exit();
+  header('Location: ../config/login.php');
+  exit();
 }
 
 // Récupérer l'ID utilisateur depuis la session
@@ -33,32 +31,56 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Vérification si un utilisateur a été trouvé
 if (!$user) {
-    die("Erreur : utilisateur introuvable dans la base de données.");
+  die("Erreur : utilisateur introuvable dans la base de données.");
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau de bord Employé</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord Employé</title>
 </head>
+
 <body>
-   <h1>Bienvenue <?php echo htmlspecialchars($user['prenom']) . ' ' . htmlspecialchars($user['nom']); ?></h1>
-    <a href="../config/logout.php">Déconnexion</a>
-    <section>
+
+  <h1>Bienvenue <?php echo htmlspecialchars($user['prenom']) . ' ' . htmlspecialchars($user['nom']); ?></h1>
+  <a href="../config/logout.php">Déconnexion</a>
+  <section>
     <a href="modifier-mot-de-passe.php" class="btn">Modifier mon mot de passe</a>
     <!--<li><a class="nav-link" href="../AvisUsers/ratings_feedback/moderate_comments.php">moderer les avis utilisateur</a></li>-->
     <!--<li><a class="nav-link" href="../moderation-avis.php">moderer les avis utilisateur</a></li>-->
-    <li><a class="nav-link" href="../avis_system_test/moderation-avis.php">moderer les avis </a></li>
-    </section>
+    <a class="nav-link" href="../avis_system_test/moderation-avis.php">moderer les avis </a>
+  </section>
 
-    <p>Bienvenue : 
-        <strong><?php echo htmlspecialchars($user['prenom'] . ' ' . $user['nom']); ?></strong>
-        (<?php echo htmlspecialchars($user['email']); ?>)
-    </p>
+  <p>Bienvenue :
+    <strong><?php echo htmlspecialchars($user['prenom'] . ' ' . $user['nom']); ?></strong>
+    (<?php echo htmlspecialchars($user['email']); ?>)
+  </p>
+
+  <!-- Section Employé -->
+  <div class="col-md-4">
+    <div class="card border-success">
+      <div class="card-header bg-success text-white">Employé</div>
+
+      <div class="card-body">
+        <ul>
+        <li><a href="../avis_system_test/moderation-avis.php" class="btn btn-success w-100 mb-2">Modérer les Avis</a></li><!-- moderer_avis.php -->
+        <li><a href="modifier-mot-de-passe.php" class="btn btn-warning w-100 mb-2">Modifier mon mot de passe</a></li><!-- modifier_mdp.php -->
+        <br>
+        <li><a href="../service_employe/liste_consommation.php">Consommation</a></li>
+        <li><a href="../service_employe/ajouter_consommation.php">Ajouter consommations</a></li>
+        <li><a href="../config/logout.php" class="btn btn-danger w-100">Déconnexion</a></li><!--  -->
+        </ul>
+        <ul>
+          <li><a href="../admin_avis.php">Modérer les avis</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 </body>
-</html>
 
+</html>

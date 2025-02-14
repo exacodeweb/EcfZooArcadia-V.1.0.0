@@ -1,12 +1,12 @@
 <?php
 die('Fichier chargé avec succès');
 // Vérification et inclusion du fichier de configuration
-if (!file_exists('../config/config.php')) {
+if (!file_exists('../config/config.php')) {//../config/config.php
     http_response_code(500);
     echo json_encode(["error" => "Erreur : Fichier de configuration introuvable !"]);
     exit;
 }
-require_once '../config/config.php';
+require_once '../config/config.php';//../config/config.php
 
 // Vérification des variables de connexion
 if (!isset($host, $dbname, $user, $password)) {
@@ -55,7 +55,7 @@ error_reporting(E_ALL);
 
 
 
-<?php
+<!--?php
 require_once '../config/config.php'; // Inclure les informations de configuration
 
 try {
@@ -63,7 +63,7 @@ try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Limiter le nombre d'avis retournés à 20   <!-- avis_2-->
+    // Limiter le nombre d'avis retournés à 20  -->  <!-- avis_2--> <!--
     $stmt = $pdo->prepare("SELECT message, auteur FROM avis WHERE statut = 'approuve' ORDER BY date_creation DESC LIMIT 20");
     $stmt->execute();
 
@@ -83,7 +83,7 @@ try {
     error_log($e->getMessage(), 3, '../logs/db_errors.log'); // Consigner l'erreur dans un fichier de log
     echo json_encode(["error" => "Erreur lors de la récupération des avis."]);
 }
-?>
+?> -->
 
 
 
@@ -99,14 +99,14 @@ try {
 
 
 
-<?php
+<!--?php
 require_once '../config/config.php'; // Assurez-vous que ce fichier contient les informations de connexion à la BDD
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Requête pour récupérer les avis approuvés  <!-- avis_2-->
+    // Requête pour récupérer les avis approuvés --> <!-- avis_2--> <!--
     $stmt = $pdo->prepare("SELECT message, auteur FROM avis WHERE statut = 'approuve' ORDER BY date_creation DESC");
 
     $stmt->execute();
@@ -121,7 +121,7 @@ try {
     http_response_code(500);
     echo json_encode(["error" => "Erreur de connexion à la base de données : " . $e->getMessage()]);
 }
-?>
+?> -->
 
 
 
@@ -137,7 +137,7 @@ try {
 
 
 
-<?php
+<!--?php
 require 'db_config.php';
 
 try {                                               // avis_2 //
@@ -151,4 +151,4 @@ try {                                               // avis_2 //
     http_response_code(500);
     echo json_encode(["error" => "Erreur lors de la récupération des avis."]);
 }
-?>
+?> -->

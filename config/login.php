@@ -2,6 +2,7 @@
 // Inclure le fichier de configuration
 $config = include('../config/config.php');
 
+
 // Démarrer une session
 session_start();
 

@@ -1,23 +1,25 @@
-.btn {
+button .btn {
   display: inline-block;
-  padding: 10px 20px;
+  /*padding: 10px 20px;*/
   text-align: center;
   color: #fff;
-  background-color: #007bff;
+  /*background-color: #007bff;*/
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+/*.btn:hover {
   background-color: #0056b3;
-}
+}*/
 
-.btn-primary {
+a .btn .btn-primary {
   background-color: #28a745;
+  padding-top: 30px !important;
 }
 
 .btn-primary:hover {
   background-color: #218838;
-}
+
+} 

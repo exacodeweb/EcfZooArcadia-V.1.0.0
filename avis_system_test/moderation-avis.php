@@ -41,9 +41,305 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'], $_POST['action'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modération des Avis</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Ajoutez les styles de typographie ici -->
+    <link rel="stylesheet" href="../fonts/fonts-style-1.css" type="text/css">
+
+    <style>
+
+      body {
+        background: beige;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0; /* Évite les marges par défaut du body */
+      }
+
+      /*.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      
+        max-width: 100%;
+        width: 90%;
+        background: #ffffff;
+        /*border: 1px solid red;*//*
+
+        padding: 20px; 
+      }*/
+
+      /*--------------------------------------------*/
+      /*body {
+        background: beige;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0; /* Évite les marges par défaut du body *//*
+      }*/
+
+    /* Conteneur principal */
+    .container {
+      display: flex;
+      flex-direction: column;
+      /*justify-content: center; */
+      /*border: 1px solid red;*/
+    }
+
+    /*.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      
+        max-width: 100%;
+        width: 90%;
+        background: #ffffff;
+        /*border: 1px solid red;*//*
+
+        padding: 20px; 
+      }*/
+
+    .content {
+      /*max-width: 1000px;*/
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
+      width: 90%;
+      /*border: dashed orange 8px;*/
+    }
+
+      /*--------------------------------------------*/
+
+          /* Titres */
+    h1 {
+      color: #343a40;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    tr th {
+      background: lightgray;
+      border: 1px solid black;
+      border-collapse: collapse !important;
+      height: 30px;
+      text-align: center;
+    }
+
+    td {
+      border: 1px solid black;
+      height: 25px;
+      padding: 5px;
+    }
+
+    .button {
+      margin-top: 30px;
+      /*align-items: center;*/
+      /*justify-content: center;*/ 
+      align-self: center;
+      
+      /*display: flex;
+      flex-direction: column;
+      align-items: center;*/
+
+    }
+
+    .button .btn {
+      padding: 4px 8px;
+
+
+    }
+
+    a .btn .btn-primary {
+      background-color: #28a745;
+      padding-top: 30px !important;
+    }
+
+
+
+
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  tr th, td {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .btn {
+    width: 100%; /* Boutons en pleine largeur */
+    text-align: center;
+  }
+}
+
+
+
+/* Mode superposé pour mobile *//*
+@media screen and (max-width: 768px) {
+  /* Cache le tableau *//*
+  table {
+    display: none;
+  }
+
+  /* Affichage en cartes *//*
+  .avis-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .avis-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  .avis-card p {
+    margin: 5px 0;
+  }
+
+  .avis-card .btn-group {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}*/
+</style>
+
+<!--<style>
+body {
+  background: beige;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 90%;
+  background: #ffffff;
+  border: 1px solid red;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Table par défaut */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+tr th {
+  background: lightgray;
+  border: 1px solid black;
+  height: 30px;
+  padding: 5px;
+}
+
+td {
+  border: 1px solid black;
+  height: 25px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Boutons */
+.btn {
+  padding: 6px 12px;
+  margin: 2px;
+}
+
+.button {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Mode superposé pour mobile */
+@media screen and (max-width: 768px) {
+  /* Cache le tableau */
+  table {
+    display: none;
+  }
+
+  /* Affichage en cartes */
+  .avis-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .avis-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  .avis-card p {
+    margin: 5px 0;
+  }
+
+  .avis-card .btn-group {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+</style>-->
 </head>
 <body>
+
+<section class="content"><!-- container -->
+  <div class="container">
     <h1>Modération des Avis</h1>
     <p>Validez ou refusez les avis soumis par les utilisateurs.</p>
 
@@ -68,7 +364,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'], $_POST['action'
                         <td>
                             <form method="POST" style="display:inline;">
                                 <input type="hidden" name="id" value="<?= $avis['id']; ?>">
-                                <button type="submit" name="action" value="approuver" class="btn btn-success">Approuver</button>
+                                <button type="submit" name="action" value="approuver" class="btn btn-warning">Approuver</button>
                             </form>
                             <form method="POST" style="display:inline;">
                                 <input type="hidden" name="id" value="<?= $avis['id']; ?>">
@@ -83,17 +379,86 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'], $_POST['action'
         <p>Aucun avis en attente de modération.</p>
     <?php endif; ?>
 
-    <!--<a href="../pages/employe_dashboard.php" class="btn btn-primary">Retour au tableau de bord</a>-->
-    <a href="../pages/admin_dashboard.php" class="btn btn-primary">Reour au tableau de bord</a>
+    <div class="button">
+      <!--<a href="../pages/employe_dashboard.php" class="btn btn-primary">Retour au tableau de bord</a>-->
+      <a href="../pages/admin_dashboard.php" class="btn btn-primary">Reour au tableau de bord</a>
+    </div>
+  </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
 
 
+<!--
+display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    -->
 
 
+<!--!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modération des Avis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold text-gray-800 mb-4">Modération des Avis</h1>
+        <p class="text-gray-600 mb-4">Validez ou refusez les avis soumis par les utilisateurs.</p>
 
+        <!?php if (!empty($avisEnAttente)): ?>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <thead>
+                        <tr class="bg-gray-200 text-gray-700 uppercase text-sm">
+                            <th class="px-4 py-2">ID</th>
+                            <th class="px-4 py-2">Auteur</th>
+                            <th class="px-4 py-2">Message</th>
+                            <th class="px-4 py-2">Date</th>
+                            <th class="px-4 py-2">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!?php foreach ($avisEnAttente as $avis): ?>
+                            <tr class="border-t border-gray-200">
+                                <td class="px-4 py-2 text-center"><!?php echo htmlspecialchars($avis['id']); ?></td>
+                                <td class="px-4 py-2"><!?php echo htmlspecialchars($avis['auteur']); ?></td>
+                                <td class="px-4 py-2 text-sm">
+                                    <!?php echo nl2br(htmlspecialchars($avis['message'])); ?>
+                                </td>
+                                <td class="px-4 py-2 text-center"><!?php echo htmlspecialchars($avis['date_creation']); ?></td>
+                                <td class="px-4 py-2 text-center flex gap-2 justify-center">
+                                    <form method="POST">
+                                        <input type="hidden" name="id" value="<!?php echo $avis['id']; ?>">
+                                        <button type="submit" name="action" value="approuver" class="bg-green-500 hover:bg-green-700 text-white py-1 px-3 rounded">Approuver</button>
+                                    </form>
+                                    <form method="POST">
+                                        <input type="hidden" name="id" value="<!?php echo $avis['id']; ?>">
+                                        <button type="submit" name="action" value="refuser" class="bg-red-500 hover:bg-red-700 text-white py-1 px-3 rounded">Refuser</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <!?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        <!?php else: ?>
+            <p class="text-gray-600 text-center">Aucun avis en attente de modération.</p>
+        <!?php endif; ?>
 
-
+        <div class="mt-4 text-center">
+            <a href="../pages/admin_dashboard.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Retour au tableau de bord</a>
+        </div>
+    </div>
+</body>
+</html>-->
 
 
 
@@ -487,3 +852,6 @@ $avis = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </table>
 </body>
 </html>
+
+            -->
+

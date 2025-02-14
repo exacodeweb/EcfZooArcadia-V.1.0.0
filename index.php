@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,7 +9,40 @@
   <link rel="stylesheet" href="x./styles/style-avis.css"><!--<<<<<<<<<<<<<<<<-->
   <link rel="stylesheet" href="x./styles/style-avis-caroussel.css">
   <link rel="stylesheet" href="x./avis_system_controls/style.css">
+
+  <!-- Lien vers Bootstrap pour le style et la mise en page responsive 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">-->
+
+  <!--style de police d'ecriture--><!--
+  <link href="https://fonts.cdnfonts.com/css/rajdhani" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">-->
+
+  <!-- Ajoutez les styles de typographie ici -->
+  <link rel="stylesheet" href="./fonts/fonts-style-1.css" type="text/css">
+  <!-- Import des polices -->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
+
+    /* Reset *//*
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }*/
+
+    /* Styles généraux *//*
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }*/
+
     /* ================================================*/
     /* Réinitialisation globale et valeurs par défaut */
     /*=================================================*/
@@ -82,19 +114,19 @@
 
     /* Logo */
     .logo {
-      height: 75px;
+      height: 90px;/*75px*/
       /*50px*/
       /* Ajustez la taille selon votre logo */
       border-radius: 4px;
     }
 
-    /* Bouton hamburger */
-    .menu-toggle {
+    /* Bouton hamburger *//*------------------------------------------------------------------------------------------*/
+    /*.menu-toggle {
       font-size: 28px;
       cursor: pointer;
       display: none;
-      /* Masquer par défaut sur les grands écrans */
-    }
+      /* Masquer par défaut sur les grands écrans *//*
+    }/*---------------------------------------------------------------------------------------------------------------*/
 
     /* Lien de navigation */
     .nav-links a {
@@ -119,7 +151,7 @@
 
     /* Bouton de réservation */
     .cta-btn {
-      background-color: #F3EDE0;
+      background-color: #F3EDE0;/*   #f2a007  */
       /*#007BFF*/
       /**/
       color: #2A7E50;
@@ -132,13 +164,28 @@
     }
 
     .cta-btn:hover {
-      background-color: #805D3A;
+      background-color: #F3EDE0 ;/*#805D3A*/
       /*#0056b3*/
       /*#fff*/
       color: #fff;
     }
 
-    /* Menu toggle */
+    /* Bouton hamburger *//*------------------------------------------------------------------------------------------*/
+    .menu-toggle {
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      /* Masquer par défaut sur les grands écrans */
+    }
+    
+    .nav-links a:hover {
+  background-color: #f2a007;
+  color: #F3EDE0;/*white*/
+  border-radius: 5px;
+}
+    /*---------------------------------------------------------------------------------------------------------------*/
+
+    /* Menu toggle *//*-----------------------------------------------------------------------------------------------*/
     @media (max-width: 768px) {
 
       .nav-links {
@@ -154,8 +201,11 @@
         /*0.5rem*/
       }
     }
+    /*---------------------------------------------------------------------------------------------------------------*/
 
+    /*=======================*/
     /* Navigation responsive */
+    /*=======================*/
     @media (max-width: 768px) {
 
       .nav-links.show {
@@ -294,7 +344,7 @@
     }
 
     /*==========================*/
-    /* About Section À propos */
+    /* About Section À propos section hero*/
     /*==========================*/
     /* Section À propos */
     #about {
@@ -313,6 +363,16 @@
       width: 100%;
       max-width: 600px;
       border-radius: 10px;
+    }
+
+    /* Ajustements pour les petits écrans */
+    @media (max-width: 768px) {
+
+    #about {
+      flex: 1 1 100%;
+      /* Chaque carte prend toute la largeur */
+      padding: 0px;
+      }
     }
 
     /*==========================*/
@@ -693,12 +753,201 @@
       }
     }
   </style>
+
+<style>
+      /* Menu toggle */
+      @media (max-width: 768px) {
+
+.nav-links {
+  /*position: absolute;*/
+  background-color: #2A7E50;
+  /*width: 100%;*/
+  /*top: 70px;*/
+  left: 0;
+}
+
+.nav-links li {
+  margin: 0.5rem 0;
+  /*0.5rem*/
+}
+}
+
+/* Navigation responsive */
+@media (max-width: 768px) {
+
+.nav-links.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.menu-toggle {
+  display: block;
+}
+
+.nav-links {
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+}
+
+/* Navigation responsive */
+@media (max-width: 768px) {
+.nav-links {
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+  /*background-color: #2A7E50;*/
+  position: absolute;
+  top: 107px;
+  /*70px*/
+  /* Ajustez selon la hauteur du header */
+  right: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+}
+
+</style>
+
+<style>
+
+    /* Bouton hamburger */
+    .menu-toggle {
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      /* Masquer par défaut sur les grands écrans */
+    }
+
+    /* Lien de navigation */
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      text-align: center;
+
+
+      transition: color 0.3s ease;
+      /* Transition douce pour l'effet de survol */
+    }
+
+    /*----*/
+    .nav-links a:hover {
+      color: #F3EDE0;/* #F2A007*/
+      /* Couleur au survol */
+      /*#007BFF*/
+    }
+
+    /*----*/
+
+    /* Bouton de réservation */
+    .cta-btn {
+      background-color: #F3EDE0;/*, #f2a007 , #805D3A*/
+      /*#007BFF*/
+      /**/
+      color: #2A7E50;
+      /*#fff*/
+      /**/
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #805D3A;
+      /*#0056b3*/
+      /*#fff*/
+      color: #fff;
+    }
+
+    /* Menu toggle */
+    @media (max-width: 768px) {
+
+      .nav-links {
+        /*position: absolute;*/
+        background-color: #2A7E50;
+        /*width: 100%;*/
+        /*top: 70px;*/
+        left: 0;
+      }
+
+      .nav-links li {
+        margin: 0.5rem 0;
+        /*0.5rem*/
+      }
+    }
+
+    /* Navigation responsive */
+    @media (max-width: 768px) {
+
+      .nav-links.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+      }
+    }
+
+    /* Navigation responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        /*background-color: #2A7E50;*/
+        position: absolute;
+        top: 107px;
+        /*70px*/
+        /* Ajustez selon la hauteur du header */
+        right: 0;
+        width: 100%;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+</style>
+
+
 </head>
 
 <body>
   <header>
     <nav class="navbar">
-      <img src="../public/assets/images/Logo-Arcadia-(9).jpg" alt="Logo Zoo Arcadia" class="logo">
+      <!--<img src="../public/assets/images/Logo-Arcadia-(9).jpg" alt="Logo Zoo Arcadia" class="logo">-->
+      <img src="./assets/logos/ZOO_ARCADIA.jpg" alt="Logo Zoo Arcadia" class="logo">
       <!-- Bouton Hamburger -->
       <span class="menu-toggle" id="menuToggle">☰</span>
 
@@ -775,6 +1024,7 @@
 
   </section>
 
+  <!----------------------------------------------------------------------------------------------- Section Services -->
   <?php
   // Inclure et récupérer l'objet PDO
   // $pdo = include '../config/config.php';
@@ -790,9 +1040,7 @@
   }
   ?>
 
-  <!------------------------------------------------------------------------------------------------- Section Services -->
-
-  <section  id="services"><!-- id="habitats" -->
+  <section id="services"><!-- id="habitats" -->
     <h2>Nos Services</h2>
     <!--<div class="services-grid">-->
     <div class="habitat-cards">
@@ -817,25 +1065,35 @@
     </div>
     <button onclick="window.location.href='./services_system_test/index.php'" class="btn btn-secondary mt-3">Voir les Services <!-- Découvrir les services  Vous êtes prèt ?  --></button>
   </section>
-  <!--------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
   <br>
 
-  <!-- et pour afficher les avis --> 
+  <!-- MENU HAMBURGER --><!-------------------------------------------------------------------------------------------->
+  <!--<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    });
+  </script>-->
+
+  <!-- et pour afficher les avis --><!--------------------------------------------------------------------------------->
   <section id="avis">
     <h3>Ce que nos visiteurs disent</h3>
     <div class="avis-scroll-container">
       <div class="avis-container">
-        <!-- Les avis validés seront insérés ici dynamiquement --> 
+        <!-- Les avis validés seront insérés ici dynamiquement -->
       </div>
     </div>
-    <button onclick="window.location.href='./tous-les-avis.php'" class="btn btn-primary mt-3">Voir tous les avis</button>  <!-- avis.html -->
+    <button onclick="window.location.href='./tous-les-avis.php'" class="btn btn-primary mt-3">Voir tous les avis</button> <!-- avis.html -->
     <button onclick="window.location.href='soumettre-avis.html'" class="btn btn-secondary mt-3">Laisser un avis</button>
   </section>
 
-  <!------------------------------------------------------------------------------------------------------------------->
-
- <!-- style pour les bouton laisser un avis "en cours de dévelop" -->
- <style>
+  <!-- style pour les bouton laisser un avis "en cours de dévelop" -->
+  <!--<style>
     .btn {
       display: inline-block;
       padding: 10px 20px;
@@ -859,9 +1117,9 @@
     .btn-primary:hover {
       background-color: #218838;
     }
-  </style>
+  </style> -->
 
-  <!-- Section Actualités -->
+  <!-- Section Actualités --><!---------------------------------------------------------------------------------------->
   <section id="news">
     <h2>Actualités et Événements</h2>
     <div class="news-cards">
@@ -872,8 +1130,8 @@
       </div>
       <div class="news-card">
         <img src="event2.jpg" alt="Événement">
-        <h3>La Nuit au Zoo</h3>
-        <p>Participez à une visite guidée nocturne exceptionnelle. Réservation obligatoire.</p>
+        <h3>Événement au Zoo</h3><!-- La Nuit au Zoo -->
+        <p>Participez à une visite guidée exceptionnelle. Réservation obligatoire.</p><!-- Participez à une visite guidée nocturne exceptionnelle. Réservation obligatoire. -->
       </div>
     </div>
   </section>
@@ -893,95 +1151,108 @@
     <p>© 2024 Zoo Arcadia - Tous droits réservés. | <a href="#">Mentions légales</a></p>
   </footer>
 
-<!--<a href="./get_reviews.php">-->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // URL de l'API
-        const apiUrl = './get_reviewws.php'; // avis-api.php
+  <!-- MENU HAMBURGER --><!-------------------------------------------------------------------------------------------->
+  <!--<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
 
-        // Conteneur pour les avis
-        const avisContainer = document.getElementById('avis-container');
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    });
+  </script> -->
 
-        // Appel à l'API
-        fetch(apiUrl)// apiUrl
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erreur réseau lors de la récupération des avis.');
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Vérifier si des avis sont disponibles
-                if (data.length === 0) {
-                    avisContainer.innerHTML = '<p>Aucun avis disponible pour le moment.</p>';
-                    return;
-                }
 
-                // Construire les avis
-                const avisHtml = data.map(avis => `
+  <!--<a href="./get_reviews.php">--><!------------------------------- API -------------------------------------------->
+  <!--<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // URL de l'API
+      const apiUrl = './get_reviewws.php'; // avis-api.php
+
+      // Conteneur pour les avis
+      const avisContainer = document.getElementById('avis-container');
+
+      // Appel à l'API
+      fetch(apiUrl) // apiUrl
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Erreur réseau lors de la récupération des avis.');
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Vérifier si des avis sont disponibles
+          if (data.length === 0) {
+            avisContainer.innerHTML = '<p>Aucun avis disponible pour le moment.</p>';
+            return;
+          }
+
+          // Construire les avis
+          const avisHtml = data.map(avis => `
                     <div class="avis">
                         <p>"${avis.message}"</p>
                         <p>- ${avis.auteur}</p>
                     </div>
                 `).join('');
 
-                // Insérer les avis dans la page
-                avisContainer.innerHTML = avisHtml;
-            })
-            .catch(error => {
-                console.error('Erreur lors de la récupération des avis :', error);
-                avisContainer.innerHTML = '<p>Impossible de charger les avis pour le moment.</p>';
-            });
+          // Insérer les avis dans la page
+          avisContainer.innerHTML = avisHtml;
+        })
+        .catch(error => {
+          console.error('Erreur lors de la récupération des avis :', error);
+          avisContainer.innerHTML = '<p>Impossible de charger les avis pour le moment.</p>';
+        });
     });
-</script>
+  </script> -->
 
-<!--------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
 
-<style>
-  #avis {
-    padding: 20px;
-    background-color: #f9f9f9;
-    background-color: #2A7E50;
-    text-align: center;
-  }
+  <style>
+    #avis {
+      padding: 20px;
+      background-color: #f9f9f9;
+      background-color: #2A7E50;
+      text-align: center;
+    }
 
-  .avis-scroll-container {
-    display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-top: 20px;
-  }
+    .avis-scroll-container {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-top: 20px;
+    }
 
-  .avis-container {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.3s ease;
-  }
+    .avis-container {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.3s ease;
+    }
 
-  .avis {
-    min-width: 300px;
-    padding: 20px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+    .avis {
+      min-width: 300px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-  .avis p {
-    font-size: 16px;
-    line-height: 1.5;
-  }
+    .avis p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
 
-  .avis cite {
-    display: block;
-    margin-top: 10px;
-    font-style: italic;
-    color: #555;
-  }
-</style>
+    .avis cite {
+      display: block;
+      margin-top: 10px;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
 
 
-<style>
+  <style>
     /*#avis-container {
         margin: 20px auto;
         padding: 10px;
@@ -990,7 +1261,7 @@
         max-width: 600px;
         background: #f9f9f9;
     }*/
-/*
+    /*
     .avis {
         margin-bottom: 15px;
         padding: 10px;
@@ -1010,74 +1281,74 @@
         text-align: right;
         font-weight: bold;
     }*/
-</style>
+  </style>
 
+  <!------------------------------- API -------------------------------------------->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const avisContainer = document.querySelector(".avis-container");
+      const avisScrollContainer = document.querySelector(".avis-scroll-container");
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const avisContainer = document.querySelector(".avis-container");
-    const avisScrollContainer = document.querySelector(".avis-scroll-container");
-
-    function chargerAvis() {
-      fetch("./get_reviews.php")//./avis_system_test // ./avis-api.php
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Erreur lors du chargement des avis.");
-          }
-          return response.json();
-        })
-        .then((avisData) => {
-          // Ajouter dynamiquement les avis
-          avisData.forEach((avis) => {
-            const avisElement = document.createElement("div");
-            avisElement.className = "avis";
-            avisElement.innerHTML = `
+      function chargerAvis() {
+        fetch("./get_reviews.php") //./avis_system_test // ./avis-api.php
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Erreur lors du chargement des avis.");
+            }
+            return response.json();
+          })
+          .then((avisData) => {
+            // Ajouter dynamiquement les avis
+            avisData.forEach((avis) => {
+              const avisElement = document.createElement("div");
+              avisElement.className = "avis";
+              avisElement.innerHTML = `
               <p>“${avis.message}”</p>
               <cite>- ${avis.auteur}</cite>
             `;
-            avisContainer.appendChild(avisElement);
-          });
+              avisContainer.appendChild(avisElement);
+            });
 
-          // Dupliquer les avis pour un défilement infini
-          const avisElements = Array.from(avisContainer.children);
-          avisElements.forEach((avis) => {
-            const clone = avis.cloneNode(true);
-            avisContainer.appendChild(clone);
-          });
+            // Dupliquer les avis pour un défilement infini
+            const avisElements = Array.from(avisContainer.children);
+            avisElements.forEach((avis) => {
+              const clone = avis.cloneNode(true);
+              avisContainer.appendChild(clone);
+            });
 
-          // Lancer le défilement automatique
-          defilementAutomatique();
-        })
-        .catch((error) => {
-          console.error(error.message);
-          avisContainer.innerHTML = `
+            // Lancer le défilement automatique
+            defilementAutomatique();
+          })
+          .catch((error) => {
+            console.error(error.message);
+            avisContainer.innerHTML = `
             <p>Erreur lors du chargement des avis. Veuillez réessayer plus tard.</p>
           `;
-        });
-    }
-
-    function defilementAutomatique() {
-      let scrollAmount = 0;
-      const scrollSpeed = 1;
-
-      function scroll() {
-        scrollAmount += scrollSpeed;
-        if (scrollAmount >= avisContainer.scrollWidth / 2) {
-          scrollAmount = 0; // Réinitialiser pour créer une boucle
-        }
-        avisScrollContainer.scrollLeft = scrollAmount;
-        requestAnimationFrame(scroll);
+          });
       }
 
-      scroll();
-    }
+      function defilementAutomatique() {
+        let scrollAmount = 0;
+        const scrollSpeed = 1;
 
-    chargerAvis();
-  });
-</script>
+        function scroll() {
+          scrollAmount += scrollSpeed;
+          if (scrollAmount >= avisContainer.scrollWidth / 2) {
+            scrollAmount = 0; // Réinitialiser pour créer une boucle
+          }
+          avisScrollContainer.scrollLeft = scrollAmount;
+          requestAnimationFrame(scroll);
+        }
 
+        scroll();
+      }
 
-  <!--  MENU HAMBURGER -->
+      chargerAvis();
+    });
+  </script>
+  <!------------------------------------------------------------------------------------------------------------------->
+
+  <!--  MENU HAMBURGER --><!--
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const menuToggle = document.getElementById('menuToggle');
@@ -1087,11 +1358,13 @@
         navLinks.classList.toggle('show');
       });
     });
-  </script>
+  </script>-->
 
-       <!------------------------------------------------------------------------------------------------------------------->
+
+
+  <!------------------------------------------------------------------------------------------------------------------->
   <!-- style pour les bouton laisser un avis "en cours de dévelop" -->
-  <style>
+  <!--<style>
     .btn {
       display: inline-block;
       padding: 10px 20px;
@@ -1115,9 +1388,9 @@
     .btn-primary:hover {
       background-color: #218838;
     }
-  </style>
+  </style>-->
 
-  <!-------------------------------------------------------------------------------------------------------------------->
+  <!------------------------------------------------------------------------------------------------------------------->
   <!-- PERMET DEFAIRE DEFILE LE CAROUSEL AVIS --->
   <!-- pour centrée le carousel -->
   <style>
@@ -1173,6 +1446,166 @@
     }
   </style>
 
+
+  <!-- style pour les bouton laisser un avis "en cours de dévelop" -->
+  <style>
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      text-align: center;
+      color: #fff;
+      background-color: #007bff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-primary {
+      background-color: #28a745;
+    }
+
+    .btn-primary:hover {
+      background-color: #218838;
+    }
+  </style>
+
+
+
+  <!-- MENU HAMBURGER --><!-------------------------------------------------------------------------------------------->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+    });
+  </script>
+
+
+
+  <!-- Scripts JavaScript nécessaires, y compris Bootstrap 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>-->
+
+
+  <!--Amélioration du CSS pour éviter le débordement -->
+  <!--Limiter la largeur et la hauteur des avis -->
+  <style>
+    /*
+      .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.card {
+    min-width: 300px;
+    max-width: 350px;
+    height: 200px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-message {
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Affiche 3 lignes max *//*
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+}
+
+.card-author {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: right;
+}*/
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.avis {
+    min-width: 300px;
+    max-width: 350px;
+    height: 200px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.avis {
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Affiche 3 lignes max */
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+}
+
+.card-author {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: right;
+}
+
+
+
+
+
+.avis {
+  flex: 0 0 300px; /* Largeur fixe */
+  max-width: 300px; /* Largeur maximale */
+  height: 150px; /* Hauteur maximale */
+  overflow: hidden; /* Empêche le dépassement */
+  text-overflow: ellipsis; /* Ajoute "..." si le texte est trop long */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre le texte */
+  align-items: center;
+}
+
+.avis p {
+  font-size: 14px; /* Taille de texte ajustée */
+  word-wrap: break-word !important; /* Force le retour à la ligne */
+  text-align: center; /* Centre le texte */
+  max-height: 100px; /* Limite la hauteur */
+  overflow: hidden; /* Cache le texte qui déborde */
+
+
+}
+
+/*p {
+  margin: 15px !important;
+  font-size: 80px;
+  color: black;
+}*/
+  </style>
+
+
+
 </body>
 
 </html>
+

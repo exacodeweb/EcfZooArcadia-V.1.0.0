@@ -281,13 +281,13 @@ include 'includes/db-connection.php';
 $animalId = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
 // Récupérer les détails de l'animal
-$sql = "SELECT prenom, race, images FROM animaux WHERE id = ?";
+$sql = "SELECT prenom, race, images FROM animaux WHERE id = ?"; // espece
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$animalId]);
 $animal = $stmt->fetch();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en, fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -378,7 +378,7 @@ h2 {
     <div class="container">
         <?php if ($animal): ?>
             <div class="animal-details">
-                <h1><?= htmlspecialchars($animal['prenom']) ?> (<?= htmlspecialchars($animal['race']) ?>)</h1>
+                <h1><?= htmlspecialchars($animal['prenom']) ?> (<?= htmlspecialchars($animal['race']) ?>)</h1><!-- espece -->
                 <div class="animal-images">
                     <?php
                     $images = json_decode($animal['images']);

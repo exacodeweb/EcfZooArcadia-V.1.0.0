@@ -1218,9 +1218,13 @@ zoo-arcadia/ V.1.0.0
 │   │   │   ├── style-css.css
 │   │   │   └── style-1.css
 │   │   ├── images
-│   │   │   ├── 2.jpg
-│   │   │   ├── 2.jpg
-│   │   │   └── 2.jpg
+│   │   │   ├── image.jpg
+│   │   │   ├── image.jpg
+│   │   │   ├── image.jpg
+│   │   │   ├── image.jpg
+│   │   │   ├── image.jpg
+│   │   │   ├── image.jpg
+│   │   │   └── image.jpg
 │   │   ├── js
 │   │   │   ├── main.js
 │   │   │   ├── script-js.js

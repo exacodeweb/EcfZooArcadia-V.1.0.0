@@ -1,4 +1,4 @@
-<?php
+<!--?php // pour la modération des avis
 // Détails de connexion à la base de données
 $host = 'localhost';         // Serveur de base de données (habituellement localhost)
 $dbname = 'zoo_arcadia'; // Nom de la base de données
@@ -20,9 +20,10 @@ try {
     // En cas d'erreur de connexion, on affiche un message d'erreur et on arrête l'exécution du script
     die('Erreur de connexion à la base de données : ' . $e->getMessage());
 }
-?>
+?>-->
 
 <!--------------------------------------------------------------------------------------------------------------------->
+<!-- pour la connexion tableau de bord, la modération des avis -->
 <?php
 // Détails de connexion à la base de données
 $host = 'localhost';

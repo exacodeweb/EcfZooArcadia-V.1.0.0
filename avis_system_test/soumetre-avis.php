@@ -11,8 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Vérifier que les champs ne sont pas vides
     if (!empty($nom) && !empty($message)) {
         try {
-            // Préparer l'insertion dans la base de données
-            $stmt = $pdo->prepare("INSERT INTO avis_2 (auteur, message, statut) VALUES (:auteur, :message, 'en_attente')");
+            // Préparer l'insertion dans la base de données  //Avis
+            $stmt = $pdo->prepare("INSERT INTO avis (auteur, message, statut) VALUES (:auteur, :message, 'en_attente')");
             $stmt->execute([
                 ':auteur' => htmlspecialchars($nom),
                 ':message' => htmlspecialchars($message)
@@ -28,9 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "Méthode non autorisée.";
 }
 ?>
-
-
-
 
 
 
